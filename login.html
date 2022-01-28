@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Log In / Sign Up</title>
-    <link rel="stylesheet" href="css/login.css"> 
+    <link rel="stylesheet" href="css/login.css" />
   </head>
   <body>
     <div class="section">
       <div class="container">
-        <div class="row full-height justify-content-center">
+        <div class="row justify-content-center">
           <div class="col-12 text-center align-self-center py-5">
             <div class="section pb-5 pt-5 pt-sm-2 text-center">
               <h6 class="mb-0 pb-3">
@@ -109,11 +109,14 @@
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-auth-compat.js"></script>
     <script>
+      $(".swal2-modal").css("background-color", "#1f2029"); //Optional changes the color of the sweetalert
+
       const firebaseApp = firebase.initializeApp({
         apiKey: "AIzaSyCCV6sMoJJ6WUfV-LUmmcEN_lOstM8n9Kw",
         authDomain: "learnmore-843f2.firebaseapp.com",
@@ -128,10 +131,12 @@
       firebase.auth().onAuthStateChanged((user) => {
         if (user) {
           var uid = user.uid;
-          console.log(uid);
-          window.location='index.html';
-        } else {
-          console.log("not login");
+          if (user.emailVerified) {
+            console.log(uid);
+            window.location = "index.html";
+          } else {
+            console.log("not login");
+          }
         }
       });
 
@@ -145,15 +150,20 @@
           .then((userCredential) => {
             // Signed in
             var user = userCredential.user;
-
             firebase
               .auth()
               .currentUser.sendEmailVerification()
               .then(() => {
                 // Email verification sent!
-                // ...
-                alert("verification link send to your email");
+                sessionStorage.setItem("warning", "Verify Your Email");
                 window.location.reload();
+                // Swal.fire({
+                //   icon: "warning",
+                //   title: "Verify Your Email",
+                //   text: "",
+                //   confirmButtonText: "OK",
+                //   confirmButtonColor: "#DD6B55",
+                // });
               });
             // ...
           })
@@ -161,6 +171,15 @@
             var errorCode = error.code;
             var errorMessage = error.message;
             console.log(errorMessage);
+            sessionStorage.setItem("error", errorMessage);
+            window.location.reload();
+            // Swal.fire({
+            //   icon: "error",
+            //   title: errorMessage,
+            //   text: "",
+            //   confirmButtonText: "OK",
+            //   confirmButtonColor: "#DD6B55",
+            // });
             // ..
           });
       });
@@ -174,20 +193,60 @@
           .then((userCredential) => {
             // Signed in
             var user = userCredential.user;
-            if(user.emailVerified){
+            if (user.emailVerified) {
               console.log(user);
-              window.location='index.html';
-            }else{
-              alert("verify Your Email First")
+              window.location = "index.html";
+            } else {
+              sessionStorage.setItem("error", "Verify Your Email");
+              window.location.reload();
+              // Swal.fire({
+              //   icon: "error",
+              //   title: "Verify Your Email",
+              //   text: "",
+              //   confirmButtonText: "OK",
+              //   confirmButtonColor: "#DD6B55",
+              // });
+              // alert("verify Your Email First");
             }
             // ...
           })
           .catch((error) => {
             var errorCode = error.code;
             var errorMessage = error.message;
+            sessionStorage.setItem("error", errorMessage);
+            window.location.reload();
+            // Swal.fire({
+            //   icon: "error",
+            //   title: errorMessage,
+            //   text: "",
+            //   confirmButtonText: "OK",
+            //   confirmButtonColor: "#DD6B55",
+            // });
             console.log(errorMessage);
           });
       });
+
+      if (sessionStorage.getItem("warning") != null) {
+        Swal.fire({
+          icon: "warning",
+          title: sessionStorage.getItem("warning"),
+          text: "",
+          confirmButtonText: "OK",
+          confirmButtonColor: "#DD6B55",
+        });
+        sessionStorage.clear();
+      }
+
+      if (sessionStorage.getItem("error") != null) {
+        Swal.fire({
+          icon: "warning",
+          title: sessionStorage.getItem("error"),
+          text: "",
+          confirmButtonText: "OK",
+          confirmButtonColor: "#DD6B55",
+        });
+        sessionStorage.clear();
+      }
     </script>
   </body>
 </html>
