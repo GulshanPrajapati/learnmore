@@ -28,12 +28,14 @@
 
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        var uid = user.uid;
-        $("#usermail").html(user.email);
-        console.log(uid.email);
-      } else {
-        console.log("not login");
-        window.location = "login.html";
+        if (user.emailVerified) {
+          var uid = user.uid;
+          $("#usermail").html(user.email);
+          console.log(uid.email);
+        }else {
+          console.log("not login");
+          window.location = "login.html";
+        }
       }
     });
 
@@ -43,7 +45,7 @@
         .signOut()
         .then(() => {
           // Sign-out successful.
-          window.location='login.html';
+          window.location = "login.html";
         })
         .catch((error) => {
           // An error happened.
