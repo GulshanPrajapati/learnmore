@@ -33,10 +33,13 @@
           $("#usermail").html(user.email);
           console.log(uid.email);
         }else {
+          console.log("email not verified");
+          window.location = "login.html";
+        }
+      }else {
           console.log("not login");
           window.location = "login.html";
         }
-      }
     });
 
     $("#logoutbtn").click(function () {
