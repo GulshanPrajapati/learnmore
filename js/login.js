@@ -22,6 +22,9 @@ firebase.auth().onAuthStateChanged((user) => {
     console.log(user.phoneNumber ? user.phoneNumber: user.email);
     console.log(uid);
     console.log("Logged In");
+    window.location="index.html";
+  }else{
+
   }
 });
 
