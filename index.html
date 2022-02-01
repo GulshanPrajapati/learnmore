@@ -1,59 +1,11 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h2>Welcome, <span id="usermail"></span></h2>
-    <button id="logoutbtn">Logout</button>
-  </body>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-firestore-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-auth-compat.js"></script>
-  <script>
-    const firebaseApp = firebase.initializeApp({
-      apiKey: "AIzaSyCCV6sMoJJ6WUfV-LUmmcEN_lOstM8n9Kw",
-      authDomain: "learnmore-843f2.firebaseapp.com",
-      projectId: "learnmore-843f2",
-      storageBucket: "learnmore-843f2.appspot.com",
-      messagingSenderId: "816414237255",
-      appId: "1:816414237255:web:3bdbcd5a32a9869d30c762",
-    });
-    const db = firebaseApp.firestore();
-    const auth = firebaseApp.auth();
-
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        if (user.emailVerified) {
-          var uid = user.uid;
-          $("#usermail").html(user.email);
-          console.log(uid.email);
-        }else {
-          console.log("email not verified");
-          window.location = "login.html";
-        }
-      }else {
-          console.log("not login");
-          window.location = "login.html";
-        }
-    });
-
-    $("#logoutbtn").click(function () {
-      firebase
-        .auth()
-        .signOut()
-        .then(() => {
-          // Sign-out successful.
-          window.location = "login.html";
-        })
-        .catch((error) => {
-          // An error happened.
-          console.log(error);
-        });
-    });
-  </script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More</title>
+</head>
+<body>
+    <h3>Home Page</h3>
+</body>
 </html>

@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #2c2c2c;
+}
+
+.loading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(31, 26, 32, 0.767);
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+}
+
+.loading div.spinner {
+  width: 50px;
+  height: 40px;
+  display: inline-block;
+}
+
+.loading div.spinner div {
+  width: 3px;
+  height: 10px;
+  background: white;
+  position: absolute;
+  left: 49%;
+  top: 43%;
+  opacity: 0;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  -webkit-animation: fade 1s linear infinite;
+          animation: fade 1s linear infinite;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.25;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.25;
+  }
+}
+
+.loading div.spinner div.bar1 {
+  -webkit-transform: rotate(0deg) translate(0, -130%);
+          transform: rotate(0deg) translate(0, -130%);
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.loading div.spinner div.bar2 {
+  -webkit-transform: rotate(30deg) translate(0, -130%);
+          transform: rotate(30deg) translate(0, -130%);
+  -webkit-animation-delay: -0.9167s;
+          animation-delay: -0.9167s;
+}
+
+.loading div.spinner div.bar3 {
+  -webkit-transform: rotate(60deg) translate(0, -130%);
+          transform: rotate(60deg) translate(0, -130%);
+  -webkit-animation-delay: -0.833s;
+          animation-delay: -0.833s;
+}
+
+.loading div.spinner div.bar4 {
+  -webkit-transform: rotate(90deg) translate(0, -130%);
+          transform: rotate(90deg) translate(0, -130%);
+  -webkit-animation-delay: -0.7497s;
+          animation-delay: -0.7497s;
+}
+
+.loading div.spinner div.bar5 {
+  -webkit-transform: rotate(120deg) translate(0, -130%);
+          transform: rotate(120deg) translate(0, -130%);
+  -webkit-animation-delay: -0.667s;
+          animation-delay: -0.667s;
+}
+
+.loading div.spinner div.bar6 {
+  -webkit-transform: rotate(150deg) translate(0, -130%);
+          transform: rotate(150deg) translate(0, -130%);
+  -webkit-animation-delay: -0.5837s;
+          animation-delay: -0.5837s;
+}
+
+.loading div.spinner div.bar7 {
+  -webkit-transform: rotate(180deg) translate(0, -130%);
+          transform: rotate(180deg) translate(0, -130%);
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+
+.loading div.spinner div.bar8 {
+  -webkit-transform: rotate(210deg) translate(0, -130%);
+          transform: rotate(210deg) translate(0, -130%);
+  -webkit-animation-delay: -0.4167s;
+          animation-delay: -0.4167s;
+}
+
+.loading div.spinner div.bar9 {
+  -webkit-transform: rotate(240deg) translate(0, -130%);
+          transform: rotate(240deg) translate(0, -130%);
+  -webkit-animation-delay: -0.333s;
+          animation-delay: -0.333s;
+}
+
+.loading div.spinner div.bar10 {
+  -webkit-transform: rotate(270deg) translate(0, -130%);
+          transform: rotate(270deg) translate(0, -130%);
+  -webkit-animation-delay: -0.2497s;
+          animation-delay: -0.2497s;
+}
+
+.loading div.spinner div.bar11 {
+  -webkit-transform: rotate(300deg) translate(0, -130%);
+          transform: rotate(300deg) translate(0, -130%);
+  -webkit-animation-delay: -0.167s;
+          animation-delay: -0.167s;
+}
+
+.loading div.spinner div.bar12 {
+  -webkit-transform: rotate(330deg) translate(0, -130%);
+          transform: rotate(330deg) translate(0, -130%);
+  -webkit-animation-delay: -0.0833s;
+          animation-delay: -0.0833s;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 5rem;
+}
+
+.container .image_contain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .image_contain lottie-player {
+  width: 80%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+  .container .image_contain lottie-player {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.container .input_contain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.container .input_contain .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 0.5rem;
+}
+
+.container .input_contain .inputs select,
+.container .input_contain .inputs input,
+.container .input_contain .inputs button {
+  width: 4rem;
+  height: 3rem;
+  background-color: rgba(93, 63, 107, 0.4);
+  color: rgba(255, 255, 255, 0.6);
+  border: #5d3f6b;
+  border-radius: 5px 0 0 5px;
+  cursor: pointer;
+  outline: none;
+  padding: 0.2rem;
+  font-size: 20px;
+  -webkit-box-shadow: rgba(36, 36, 36, 0.096) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+          box-shadow: rgba(36, 36, 36, 0.096) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.container .input_contain .inputs select option,
+.container .input_contain .inputs input option,
+.container .input_contain .inputs button option {
+  font-size: 15px;
+}
+
+.container .input_contain .inputs input {
+  width: 75%;
+  cursor: text;
+  padding: 1rem;
+  font-size: 20px;
+  border-radius: 0;
+}
+
+.container .input_contain .inputs button {
+  width: 4rem;
+  border-radius: 0 5px 5px 0;
+  margin-left: 5px;
+  background-color: #5d3f6b7d;
+}
+
+.container .input_contain .inputs button svg {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.container .input_contain .or_contain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .input_contain .or_contain span::before,
+.container .input_contain .or_contain span::after {
+  display: inline-block;
+  content: "";
+  width: 7rem;
+  height: 2px;
+  background: #434343;
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+  margin: 0 1rem;
+}
+
+.container .input_contain .google {
+  width: 80%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  background-color: #5d3f6b;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.container .input_contain .google img {
+  width: 30px;
+}
+
+.container .enterotp_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.container .enterotp_section form {
+  text-align: center;
+}
+
+.container .enterotp_section form p {
+  font-size: 25px;
+  margin: 0 0 2rem 0;
+}
+
+.container .enterotp_section form input {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  background-color: rgba(93, 63, 107, 0.5);
+  border: none;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 25px;
+}
+
+.container .enterotp_section form input:focus {
+  outline: 2px dashed #86539e;
+}
+
+.container .enterotp_section .comment {
+  color: #961f1f;
+  text-align: center;
+}
+
+.container footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  background-color: #2c2c2c;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
