@@ -23,3 +23,14 @@ firebase.auth().onAuthStateChanged((user) => {
       window.location="login.html";
   }
 });
+
+
+// logout 
+$('#logout').click(function(){
+    firebase.auth().signOut().then(() => {
+        // Sign-out successful.
+        window.location.reload();
+      }).catch((error) => {
+        // An error happened.
+      });
+})
