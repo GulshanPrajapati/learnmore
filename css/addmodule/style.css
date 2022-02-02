@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #2c2c2c;
+  font-family: "Poppins", sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .contain {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+  max-width: 21rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 0 20px;
+}
+
+.container .contain .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 30px;
+}
+
+.container .contain .heading .add_btn {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container .contain .data_contain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin-bottom: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .contain .data_contain .row {
+  width: 100%;
+  max-width: 17rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 20px;
+  background-color: rgba(196, 196, 196, 0.2);
+  border-radius: 5px;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.container .contain .data_contain .row span {
+  cursor: pointer;
+  padding: 0.6rem;
+}
+
+.container .contain .submit_btn {
+  text-align: center;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+  max-width: 22rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #2c2c2c;
+  padding: 0rem 0.5rem 0.5rem 0.5rem;
+  cursor: pointer;
+}
+
+.container .contain .submit_btn p {
+  margin: 0 !important;
+  padding: 0.8rem;
+  border-radius: 5px;
+  background-color: #5d3f6b;
+  font-size: 18px;
+}
+/*# sourceMappingURL=style.css.map */
