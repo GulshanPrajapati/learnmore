@@ -282,15 +282,7 @@ body {
         align-items: center;
         span {
             font-size: 13px;
-            text-transform: capitalize;
+            color: rgba(255, 255, 255, 0.6);
         }
     }
-    // .active {
-    //     background: rgba(93, 63, 107, 0.6);
-    //     backdrop-filter: blur(6px);
-    //     border-radius: 10px;
-    //     border: 1px solid rgba(255, 255, 255, 0.18);
-    //     background-color: #5d3f6b;
-    //     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    // }
 }

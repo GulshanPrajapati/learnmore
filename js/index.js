@@ -18,6 +18,17 @@ const firebaseApp = firebase.initializeApp({
 const db = firebaseApp.firestore();
 const auth = firebaseApp.auth();
 
+// logout 
+$('#logout').click(function(){
+  firebase.auth().signOut().then(() => {
+      // Sign-out successful.
+      window.location.reload();
+    }).catch((error) => {
+      // An error happened.
+    });
+})
+
+
 // on state change
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
@@ -31,25 +42,13 @@ firebase.auth().onAuthStateChanged((user) => {
 });
 
 
-// logout 
-$('#logout').click(function(){
-    firebase.auth().signOut().then(() => {
-        // Sign-out successful.
-        window.location.reload();
-      }).catch((error) => {
-        // An error happened.
-      });
-})
+
 
 // message icon onclick css 
 $('.message_icon').click(function(){
   $('.message_icon').css('background-color','rgba(68, 68, 68, 0.8)')
 })
 
-// add goal onclick event
-$('.addGoal').click(function(){
-  window.location='pages/addgoal.html';
-})
 
 // toggling goal module 
 $(".module").on('click',function(){

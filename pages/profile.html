@@ -3,8 +3,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add Goal - Learn More</title>
-    <link rel="stylesheet" href="../css/addgoal/style.css" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="../css/profile/style.css" />
+
+    <!-- lottieflies script -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
   <body>
     <!-- loading  -->
@@ -29,63 +32,105 @@
     <div class="container">
       <div class="contain">
         <div class="heading">
-          <h4>Add New Goal</h4>
+          <h4>Profile</h4>
         </div>
-        <div class="data_contain">
-          <div class="row">
-            <label for="goal_name">Goal Name</label>
-            <input type="text" id="goal_name" placeholder="Enter Goal Name" />
+
+        <div class="profile_contain">
+          <div class="profile_icon">
+            <img src="../image/face3d.png" alt="profile image" />
+          </div>
+          <div class="profile_information">
+            <span class="name">Rahul Jaiswar</span>
+            <span class="email">jaiswarrahul66@gmail.com</span>
+            <span class="number">+919139416990</span>
+          </div>
+        </div>
+
+        <div class="user_counts">
+          <div class="row" style="border: none !important">
+            <span class="title">Score</span>
+            <span class="number">100</span>
           </div>
           <div class="row">
-            <label for="course">Course</label>
-            <input
-              list="course_data"
-              name="course"
-              id="course"
-              placeholder="Enter Course"
-            />
-            <datalist id="course_data">
-              <option value="Engineering"></option>
-              <option value="CAT"></option>
-              <option value="GATE"></option>
-              <option value="UPSC"></option>
-              <option value="MPSC"></option>
-            </datalist>
+            <span class="title">Goal</span>
+            <span class="number">2</span>
           </div>
           <div class="row">
-            <label for="duration">Duration <span>[In Months]</span> </label>
-            <input type="tel" placeholder="Enter Duration" id="duration" />
+            <span class="title">Friends</span>
+            <span class="number">12k</span>
           </div>
+          <!-- <div class="row">
+                <span class="title">Subscription</span>
+                <span class="number">Free</span>
+            </div> -->
+        </div>
+
+        <div class="settings">
+
           <div class="row">
-            <label for="time">Set Time To Study</label>
-            <input
-              type="time"
-              placeholder="Set Time To study"
-              id="time"
-              value="09:00"
-            />
+            <div class="col">
+              <span>Account</span>
+              <div class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path
+                    fill="rgba(255, 255, 255, 0.6)"
+                    d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="col_data" style="display:none ;">
+                <input type="text" placeholder="Update Name" id="update_name">
+                <input type="text" placeholder="Update Email" id="update_email">
+                <input type="text" placeholder="Update Number" id="update_number">
+                <button id="update_btn">Update</button>
+            </div>
           </div>
+
           <div class="row">
-            <button id="submit">
-              next
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="24"
-                viewBox="0 0 24 24"
-                width="24"
-              >
-                <path d="M0 0h24v24H0V0z" fill="none" />
-                <path
-                  fill="rgba(255, 255, 255, 0.8)"
-                  d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"
-                />
-              </svg>
-            </button>
+            <div class="col">
+              <span>Account</span>
+              <div class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path
+                    fill="rgba(255, 255, 255, 0.6)"
+                    d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="col_data" style="display:none ;">
+                <input type="text" placeholder="Update Name" id="update_name">
+                <input type="text" placeholder="Update Email" id="update_email">
+                <input type="text" placeholder="Update Number" id="update_number">
+                <button id="update_btn">Update</button>
+            </div>
           </div>
+
+          <div class="row logout_btn">
+            <div class="col">
+              <span>Logout</span>
+              <div class="icon_">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path fill="rgba(255, 255, 255, 0.6)" d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/></svg>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
-
     <!------------------------------------------------- menu tabs ------------------------------------------->
     <div class="menu_tabs">
       <div class="home tabs" onclick="window.location='../index.html' ">
@@ -106,7 +151,7 @@
         </svg>
         <!-- <span>Home</span> -->
       </div>
-      <div class="search tabs">
+      <div class="search tabs" onclick="window.location='search.html' ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="30"
@@ -121,7 +166,7 @@
         </svg>
         <!-- <span>Search</span> -->
       </div>
-      <div class="addGoal tabs">
+      <div class="addGoal tabs" onclick="window.location='addgoal.html' ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="40"
@@ -134,7 +179,7 @@
             d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
           />
         </svg>
-        <span>Add Goal</span>
+        <!-- <span>Add Goal</span> -->
       </div>
       <div class="course tabs">
         <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -154,7 +199,7 @@
         </svg>
         <!-- <span>Course</span> -->
       </div>
-      <div class="profile tabs" onclick="window.location='profile.html'">
+      <div class="profile tabs">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="30"
@@ -167,12 +212,11 @@
             d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
           />
         </svg>
-        <!-- <span>Profile</span> -->
+        <span>Profile</span>
       </div>
     </div>
     <!------------------------------------------------- end here------------------------------------------->
 
-    
     <!-- scripts  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -180,6 +224,6 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-auth-compat.js"></script>
 
-    <script src="../js/addgoal.js"></script>
+    <script src="../js/profile.js"></script>
   </body>
 </html>
