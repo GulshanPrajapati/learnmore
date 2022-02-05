@@ -358,14 +358,14 @@ body {
 
 .container .enterotp_section form input {
   display: inline-block;
-  width: 55px;
-  height: 55px;
+  width: 40px;
+  height: 40px;
   text-align: center;
   background-color: rgba(93, 63, 107, 0.5);
   border: none;
   border-radius: 5px;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 25px;
+  font-size: 23px;
 }
 
 .container .enterotp_section form input:focus {
