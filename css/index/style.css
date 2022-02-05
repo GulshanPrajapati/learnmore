@@ -37,7 +37,7 @@ body {
   width: -webkit-fill-available;
   width: -moz-available;
   width: stretch;
-  max-width: 21rem;
+  max-width: 45rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,6 +48,14 @@ body {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .container .contain {
+    border: 1px solid #3f3f3f;
+    border-radius: 20px;
+    padding-bottom: 1em;
+  }
 }
 
 .container .contain .heading {
@@ -226,9 +234,9 @@ body {
   width: -webkit-fill-available;
   width: -moz-available;
   width: stretch;
-  max-width: 20rem;
+  max-width: 45rem;
   position: fixed;
-  bottom: 4px;
+  bottom: 0;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -256,10 +264,11 @@ body {
 .menu_tabs .tabs {
   padding: 0.4rem;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .menu_tabs .active {
-  background-color: #5D3F6B;
+  background-color: #5d3f6b;
   -webkit-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
           box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }

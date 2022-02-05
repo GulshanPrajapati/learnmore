@@ -36,14 +36,31 @@ body {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  width: 100%;
+  max-width: 45em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: stretch;
+}
+
+@media (min-width: 768px) {
+  .container .contain {
+    border: 1px solid #3f3f3f;
+    border-radius: 20px;
+  }
 }
 
 .container .contain .heading {
+  width: 90%;
   color: rgba(255, 255, 255, 0.6);
   font-size: 30px;
 }
 
 .container .contain .data_contain {
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,7 +105,6 @@ body {
 }
 
 .container .contain .data_contain .row input {
-  width: 18rem;
   padding: 0.8rem;
   border: none;
   border-radius: 5px;

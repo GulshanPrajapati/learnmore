@@ -31,7 +31,7 @@ body {
   width: -webkit-fill-available;
   width: -moz-available;
   width: stretch;
-  max-width: 21rem;
+  max-width: 45rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,6 +42,14 @@ body {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .container .contain {
+    border: 1px solid #3f3f3f;
+    border-radius: 20px;
+    padding-bottom: 1em;
+  }
 }
 
 .container .contain .heading {
@@ -85,11 +93,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  max-width: 45rem;
+  gap: 10px;
 }
 
 .container .contain .data_contain .row {
-  width: 100%;
-  max-width: 17rem;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,7 +118,6 @@ body {
   padding: 0px 20px;
   background-color: rgba(196, 196, 196, 0.2);
   border-radius: 5px;
-  margin: 10px 0;
   font-size: 18px;
 }
 
@@ -122,7 +131,7 @@ body {
   width: -webkit-fill-available;
   width: -moz-available;
   width: stretch;
-  max-width: 22rem;
+  max-width: 45rem;
   position: fixed;
   bottom: 0;
   left: 0;

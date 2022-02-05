@@ -18,11 +18,21 @@ body {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
+        width: 100%;
+        max-width: 45em;
+        align-items: center;
+        height: stretch;
+        @media (min-width: 768px) {
+            border: 1px solid #3f3f3f;
+            border-radius: 20px;
+        }
         .heading {
+            width: 90%;
             color: rgba(255, 255, 255, 0.6);
             font-size: 30px;
         }
         .data_contain {
+            width: 90%;
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
@@ -49,14 +59,14 @@ body {
                         opacity: 1;
                         display: block;
                         // background-color: white;
-                        filter: invert(100%) brightness(70%) ;
+                        filter: invert(100%) brightness(70%);
                         width: 20px;
                         height: 20px;
                         border-width: thin;
                     }
-                  }
+                }
                 input {
-                    width: 18rem;
+                    // width: 18rem;
                     padding: 0.8rem;
                     border: none;
                     border-radius: 5px;
