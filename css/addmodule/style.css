@@ -220,6 +220,11 @@ body {
   font-size: 30px;
 }
 
+.container .contain .heading h4 {
+  margin-bottom: 0.7rem;
+  margin-top: 0.7rem;
+}
+
 .container .contain .heading .add_btn {
   border: 1px solid rgba(255, 255, 255, 0.6);
   padding: 5px;
@@ -246,7 +251,7 @@ body {
   gap: 10px;
 }
 
-.container .contain .data_contain .row {
+.container .contain .data_contain .row, .container .contain .data_contain .submit_btn {
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -269,34 +274,16 @@ body {
   font-size: 18px;
 }
 
-.container .contain .data_contain .row span {
+.container .contain .data_contain .row span, .container .contain .data_contain .submit_btn span {
   cursor: pointer;
   padding: 0.6rem;
 }
 
-.container .contain .submit_btn {
+.container .contain .data_contain .submit_btn {
+  display: block !important;
   text-align: center;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: stretch;
-  max-width: 45rem;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #2c2c2c;
-  padding: 0rem 0.5rem 0.5rem 0.5rem;
-  cursor: pointer;
-}
-
-.container .contain .submit_btn p {
-  margin: 0 !important;
-  padding: 0.8rem;
-  border-radius: 5px;
   background-color: #5d3f6b;
-  font-size: 18px;
+  padding: 0.6rem 20px;
 }
 
 .menu_tabs {

@@ -223,6 +223,11 @@ body {
   font-size: 25px;
 }
 
+.container .contain .heading h4 {
+  margin-bottom: 0.7rem;
+  margin-top: 0.7rem;
+}
+
 .container .contain .paid_service {
   display: -webkit-box;
   display: -ms-flexbox;

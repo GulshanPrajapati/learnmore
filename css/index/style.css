@@ -227,6 +227,11 @@ body {
   text-transform: capitalize;
 }
 
+.container .contain .heading h4 {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
 .container .contain .heading .message_icon {
   padding: 10px;
   border-radius: 7px;
@@ -442,6 +447,6 @@ body {
 
 .menu_tabs .tabs span {
   font-size: 13px;
-  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.6);
 }
 /*# sourceMappingURL=style.css.map */

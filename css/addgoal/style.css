@@ -208,6 +208,11 @@ body {
   font-size: 30px;
 }
 
+.container .contain .heading h4 {
+  margin-bottom: 0.7rem;
+  margin-top: 0.7rem;
+}
+
 .container .contain .data_contain {
   width: 90%;
   display: -webkit-box;
