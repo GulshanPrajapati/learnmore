@@ -171,11 +171,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   font-family: "Poppins", sans-serif;
   margin-bottom: 5rem;
+  margin-top: 2rem;
 }
 
 .container .image_contain {

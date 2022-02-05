@@ -1,7 +1,7 @@
-// $( window ).on("load", function() {
-//   // Handler for .load() called.
-//   $(".loading").hide();
-// });
+$( window ).on("load", function() {
+  // Handler for .load() called.
+  $(".loading").hide();
+});
 const firebaseApp = firebase.initializeApp({
   apiKey: "AIzaSyBABYSKw9SNQ4zEHTP9wYC-gDVw_dy2XjI",
   authDomain: "webdemo-c1945.firebaseapp.com",
@@ -18,14 +18,7 @@ const auth = firebaseApp.auth();
 // on state change
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
-    var uid = user.uid;
-    console.log(user.phoneNumber ? user.phoneNumber: user.email);
-    console.log(uid);
-    console.log("Logged In");
-    $('.loading').hide();
     window.location="index.html";
-  }else{
-
   }
 });
 
