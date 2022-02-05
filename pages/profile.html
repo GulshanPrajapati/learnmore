@@ -40,9 +40,9 @@
             <img src="../image/face3d.png" alt="profile image" />
           </div>
           <div class="profile_information">
-            <span class="name">Rahul Jaiswar</span>
-            <span class="email">jaiswarrahul66@gmail.com</span>
-            <span class="number">+919139416990</span>
+            <span class="name" id="username"></span>
+            <span class="email" id="useremail"></span>
+            <span class="number" id="usernumber"></span>
           </div>
         </div>
 
@@ -95,7 +95,7 @@
 
           <div class="row">
             <div class="col">
-              <span>Account</span>
+              <span>Add Module</span>
               <div class="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -119,6 +119,33 @@
             </div>
           </div>
 
+          <div class="row privacypolicy">
+            <div class="col">
+              <span>Subcription Plan</span>
+              <div class="icon_">
+                <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-currency-inr" width="24" height="24" viewBox="0 0 24 24"><path fill="rgba(255, 255, 255, 0.6)" d="M8,3H18L17,5H13.74C14.22,5.58 14.58,6.26 14.79,7H18L17,9H15C14.75,11.57 12.74,13.63 10.2,13.96V14H9.5L15.5,21H13L7,14V12H9.5V12C11.26,12 12.72,10.7 12.96,9H7L8,7H12.66C12.1,5.82 10.9,5 9.5,5H7L8,3Z" /></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="row privacypolicy">
+            <div class="col">
+              <span>Privacy Policy</span>
+              <div class="icon_">
+                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/><path fill="rgba(255, 255, 255, 0.6)"  d="M12,3.19l7,3.11V11c0,4.52-2.98,8.69-7,9.93C7.98,19.69,5,15.52,5,11V6.3L12,3.19 M12,1L3,5v6c0,5.55,3.84,10.74,9,12 c5.16-1.26,9-6.45,9-12V5L12,1L12,1z M11,7h2v2h-2V7z M11,11h2v6h-2V11z"/></g></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="row privacypolicy">
+            <div class="col">
+              <span>Help</span>
+              <div class="icon_">
+                <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-help" width="24" height="24" viewBox="0 0 24 24"><path fill="rgba(255, 255, 255, 0.6)" d="M10,19H13V22H10V19M12,2C17.35,2.22 19.68,7.62 16.5,11.67C15.67,12.67 14.33,13.33 13.67,14.17C13,15 13,16 13,17H10C10,15.33 10,13.92 10.67,12.92C11.33,11.92 12.67,11.33 13.5,10.67C15.92,8.43 15.32,5.26 12,5A3,3 0 0,0 9,8H6A6,6 0 0,1 12,2Z" /></svg>
+              </div>
+            </div>
+          </div>
+
           <div class="row logout_btn">
             <div class="col">
               <span>Logout</span>
@@ -129,6 +156,7 @@
           </div>
           
         </div>
+        
       </div>
     </div>
     <!------------------------------------------------- menu tabs ------------------------------------------->
@@ -181,7 +209,7 @@
         </svg>
         <!-- <span>Add Goal</span> -->
       </div>
-      <div class="course tabs">
+      <div class="course tabs" onclick="window.location='course.html'">
         <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -1,7 +1,7 @@
-// show loader on page load
-$( document ).ready(function() {
-  $('.loading').hide();
-});
+// // show loader on page load
+// $( document ).ready(function() {
+//   $('.loading').hide();
+// });
 
 
 // initializeApp
@@ -36,6 +36,7 @@ firebase.auth().onAuthStateChanged((user) => {
     console.log(user.phoneNumber ? user.phoneNumber : user.email);
     console.log(uid);
     console.log("Logged In");
+    $('.loading').hide();
   }else{
       window.location="login.html";
   }

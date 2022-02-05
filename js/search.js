@@ -33,3 +33,13 @@ firebase.auth().onAuthStateChanged((user) => {
     window.location = "../login.html";
   }
 });
+
+$("#search_btn").keyup(function () {
+  if ($("#search_btn").val() == "") {
+    $(".search_result").css("display", "none");
+    $(".loading_content").show();
+  } else {
+    $(".search_result").css("display", "flex");
+    $(".loading_content").hide();
+  }
+});
