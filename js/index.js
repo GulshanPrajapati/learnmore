@@ -1,3 +1,9 @@
+// show loader on page load
+$( document ).ready(function() {
+  $('.loading').hide();
+});
+
+
 // initializeApp
 const firebaseApp = firebase.initializeApp({
   apiKey: "AIzaSyBABYSKw9SNQ4zEHTP9wYC-gDVw_dy2XjI",
@@ -35,12 +41,6 @@ $('#logout').click(function(){
       });
 })
 
-
-// show loader on page load
-$( document ).ready(function() {
-  $('.loading').hide();
-});
-
 // message icon onclick css 
 $('.message_icon').click(function(){
   $('.message_icon').css('background-color','rgba(68, 68, 68, 0.8)')
@@ -52,8 +52,7 @@ $('.addGoal').click(function(){
 })
 
 // toggling goal module 
-$('.module').click(function () {
-  var divname= $(this).last().hide();
-  console.log($(this).last().length)
-
-});
+$(".module").on('click',function(){
+  $(this).find(".module_data").toggle();
+  $(this).find('.icon').toggleClass('rotate_icon')
+})

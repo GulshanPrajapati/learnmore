@@ -339,6 +339,11 @@ body {
   margin: 10px 0 !important;
 }
 
+.container .contain .module_contain .module .heading .rotate_icon {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
 .container .contain .module_contain .module .module_data {
   border-top: 1px solid rgba(128, 128, 128, 0.37);
   padding-top: 15px;
@@ -389,7 +394,7 @@ body {
   width: -webkit-fill-available;
   width: -moz-available;
   width: stretch;
-  max-width: 45rem;
+  max-width: 46rem;
   position: fixed;
   bottom: 0;
   left: 0;

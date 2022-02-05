@@ -9,6 +9,154 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.loading {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(31, 26, 32, 0.95);
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.loading div.spinner {
+  width: 50px;
+  height: 40px;
+  display: inline-block;
+}
+
+.loading div.spinner div {
+  width: 3px;
+  height: 10px;
+  background: white;
+  position: absolute;
+  left: 49%;
+  top: 43%;
+  opacity: 0;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+  -webkit-animation: fade 1s linear infinite;
+          animation: fade 1s linear infinite;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.25;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.25;
+  }
+}
+
+.loading div.spinner div.bar1 {
+  -webkit-transform: rotate(0deg) translate(0, -130%);
+          transform: rotate(0deg) translate(0, -130%);
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.loading div.spinner div.bar2 {
+  -webkit-transform: rotate(30deg) translate(0, -130%);
+          transform: rotate(30deg) translate(0, -130%);
+  -webkit-animation-delay: -0.9167s;
+          animation-delay: -0.9167s;
+}
+
+.loading div.spinner div.bar3 {
+  -webkit-transform: rotate(60deg) translate(0, -130%);
+          transform: rotate(60deg) translate(0, -130%);
+  -webkit-animation-delay: -0.833s;
+          animation-delay: -0.833s;
+}
+
+.loading div.spinner div.bar4 {
+  -webkit-transform: rotate(90deg) translate(0, -130%);
+          transform: rotate(90deg) translate(0, -130%);
+  -webkit-animation-delay: -0.7497s;
+          animation-delay: -0.7497s;
+}
+
+.loading div.spinner div.bar5 {
+  -webkit-transform: rotate(120deg) translate(0, -130%);
+          transform: rotate(120deg) translate(0, -130%);
+  -webkit-animation-delay: -0.667s;
+          animation-delay: -0.667s;
+}
+
+.loading div.spinner div.bar6 {
+  -webkit-transform: rotate(150deg) translate(0, -130%);
+          transform: rotate(150deg) translate(0, -130%);
+  -webkit-animation-delay: -0.5837s;
+          animation-delay: -0.5837s;
+}
+
+.loading div.spinner div.bar7 {
+  -webkit-transform: rotate(180deg) translate(0, -130%);
+          transform: rotate(180deg) translate(0, -130%);
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+
+.loading div.spinner div.bar8 {
+  -webkit-transform: rotate(210deg) translate(0, -130%);
+          transform: rotate(210deg) translate(0, -130%);
+  -webkit-animation-delay: -0.4167s;
+          animation-delay: -0.4167s;
+}
+
+.loading div.spinner div.bar9 {
+  -webkit-transform: rotate(240deg) translate(0, -130%);
+          transform: rotate(240deg) translate(0, -130%);
+  -webkit-animation-delay: -0.333s;
+          animation-delay: -0.333s;
+}
+
+.loading div.spinner div.bar10 {
+  -webkit-transform: rotate(270deg) translate(0, -130%);
+          transform: rotate(270deg) translate(0, -130%);
+  -webkit-animation-delay: -0.2497s;
+          animation-delay: -0.2497s;
+}
+
+.loading div.spinner div.bar11 {
+  -webkit-transform: rotate(300deg) translate(0, -130%);
+          transform: rotate(300deg) translate(0, -130%);
+  -webkit-animation-delay: -0.167s;
+          animation-delay: -0.167s;
+}
+
+.loading div.spinner div.bar12 {
+  -webkit-transform: rotate(330deg) translate(0, -130%);
+          transform: rotate(330deg) translate(0, -130%);
+  -webkit-animation-delay: -0.0833s;
+          animation-delay: -0.0833s;
+}
+
 .container {
   width: 100%;
   height: auto;
