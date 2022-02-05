@@ -10,8 +10,156 @@ body {
   scroll-behavior: smooth;
 }
 
+.loading {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(31, 26, 32, 0.95);
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.loading div.spinner {
+  width: 50px;
+  height: 40px;
+  display: inline-block;
+}
+
+.loading div.spinner div {
+  width: 3px;
+  height: 10px;
+  background: white;
+  position: absolute;
+  left: 49%;
+  top: 43%;
+  opacity: 0;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+  -webkit-animation: fade 1s linear infinite;
+          animation: fade 1s linear infinite;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.25;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.25;
+  }
+}
+
+.loading div.spinner div.bar1 {
+  -webkit-transform: rotate(0deg) translate(0, -130%);
+          transform: rotate(0deg) translate(0, -130%);
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.loading div.spinner div.bar2 {
+  -webkit-transform: rotate(30deg) translate(0, -130%);
+          transform: rotate(30deg) translate(0, -130%);
+  -webkit-animation-delay: -0.9167s;
+          animation-delay: -0.9167s;
+}
+
+.loading div.spinner div.bar3 {
+  -webkit-transform: rotate(60deg) translate(0, -130%);
+          transform: rotate(60deg) translate(0, -130%);
+  -webkit-animation-delay: -0.833s;
+          animation-delay: -0.833s;
+}
+
+.loading div.spinner div.bar4 {
+  -webkit-transform: rotate(90deg) translate(0, -130%);
+          transform: rotate(90deg) translate(0, -130%);
+  -webkit-animation-delay: -0.7497s;
+          animation-delay: -0.7497s;
+}
+
+.loading div.spinner div.bar5 {
+  -webkit-transform: rotate(120deg) translate(0, -130%);
+          transform: rotate(120deg) translate(0, -130%);
+  -webkit-animation-delay: -0.667s;
+          animation-delay: -0.667s;
+}
+
+.loading div.spinner div.bar6 {
+  -webkit-transform: rotate(150deg) translate(0, -130%);
+          transform: rotate(150deg) translate(0, -130%);
+  -webkit-animation-delay: -0.5837s;
+          animation-delay: -0.5837s;
+}
+
+.loading div.spinner div.bar7 {
+  -webkit-transform: rotate(180deg) translate(0, -130%);
+          transform: rotate(180deg) translate(0, -130%);
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+
+.loading div.spinner div.bar8 {
+  -webkit-transform: rotate(210deg) translate(0, -130%);
+          transform: rotate(210deg) translate(0, -130%);
+  -webkit-animation-delay: -0.4167s;
+          animation-delay: -0.4167s;
+}
+
+.loading div.spinner div.bar9 {
+  -webkit-transform: rotate(240deg) translate(0, -130%);
+          transform: rotate(240deg) translate(0, -130%);
+  -webkit-animation-delay: -0.333s;
+          animation-delay: -0.333s;
+}
+
+.loading div.spinner div.bar10 {
+  -webkit-transform: rotate(270deg) translate(0, -130%);
+          transform: rotate(270deg) translate(0, -130%);
+  -webkit-animation-delay: -0.2497s;
+          animation-delay: -0.2497s;
+}
+
+.loading div.spinner div.bar11 {
+  -webkit-transform: rotate(300deg) translate(0, -130%);
+          transform: rotate(300deg) translate(0, -130%);
+  -webkit-animation-delay: -0.167s;
+          animation-delay: -0.167s;
+}
+
+.loading div.spinner div.bar12 {
+  -webkit-transform: rotate(330deg) translate(0, -130%);
+          transform: rotate(330deg) translate(0, -130%);
+  -webkit-animation-delay: -0.0833s;
+          animation-delay: -0.0833s;
+}
+
 .st {
-  font-size: 12px !important;
+  font-size: 15px !important;
 }
 
 .container {
@@ -81,8 +229,7 @@ body {
 
 .container .contain .heading .message_icon {
   padding: 10px;
-  border-radius: 3px;
-  cursor: pointer;
+  border-radius: 7px;
 }
 
 .container .contain .information_contain {
@@ -105,6 +252,7 @@ body {
 
 .container .contain .information_contain .row {
   width: 6rem;
+  height: 9em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,18 +260,23 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: rgba(68, 68, 68, 0.9);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0.7rem 1.8rem;
   border-radius: 6px;
   margin: 0 7px;
   gap: 8px;
+  background: rgba(68, 68, 68, 0.8);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .container .contain .information_contain .row .heading {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .container .contain .information_contain .row .animated_icon lottie-player {
@@ -163,6 +316,8 @@ body {
   border-radius: 5px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
           box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .container .contain .module_contain .module .heading {
@@ -241,8 +396,6 @@ body {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  background-color: #444444;
-  border-radius: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,17 +412,31 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 1rem;
+  background: rgba(68, 68, 68, 0.4);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 
 .menu_tabs .tabs {
   padding: 0.4rem;
   border-radius: 4px;
-  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.menu_tabs .active {
-  background-color: #5d3f6b;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+.menu_tabs .tabs span {
+  font-size: 13px;
+  text-transform: capitalize;
 }
 /*# sourceMappingURL=style.css.map */

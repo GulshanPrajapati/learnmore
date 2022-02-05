@@ -8,9 +8,107 @@ body {
     color: rgba(255, 255, 255, 0.6);
     scroll-behavior: smooth;
 }
+// loading animation
+.loading {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31, 26, 32, 0.95);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    overflow: hidden;
+    div.spinner {
+        width: 50px;
+        height: 40px;
+        display: inline-block;
+    }
+    div.spinner div {
+        width: 3px;
+        height: 10px;
+        background: rgb(255, 255, 255);
+        position: absolute;
+        left: 49%;
+        top: 43%;
+        opacity: 0;
+        border-radius: 50px;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+        animation: fade 1s linear infinite;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0.25;
+        }
+    }
+
+    div.spinner div.bar1 {
+        transform: rotate(0deg) translate(0, -130%);
+        animation-delay: 0s;
+    }
+
+    div.spinner div.bar2 {
+        transform: rotate(30deg) translate(0, -130%);
+        animation-delay: -0.9167s;
+    }
+
+    div.spinner div.bar3 {
+        transform: rotate(60deg) translate(0, -130%);
+        animation-delay: -0.833s;
+    }
+    div.spinner div.bar4 {
+        transform: rotate(90deg) translate(0, -130%);
+        animation-delay: -0.7497s;
+    }
+    div.spinner div.bar5 {
+        transform: rotate(120deg) translate(0, -130%);
+        animation-delay: -0.667s;
+    }
+    div.spinner div.bar6 {
+        transform: rotate(150deg) translate(0, -130%);
+        animation-delay: -0.5837s;
+    }
+    div.spinner div.bar7 {
+        transform: rotate(180deg) translate(0, -130%);
+        animation-delay: -0.5s;
+    }
+    div.spinner div.bar8 {
+        transform: rotate(210deg) translate(0, -130%);
+        animation-delay: -0.4167s;
+    }
+    div.spinner div.bar9 {
+        transform: rotate(240deg) translate(0, -130%);
+        animation-delay: -0.333s;
+    }
+    div.spinner div.bar10 {
+        transform: rotate(270deg) translate(0, -130%);
+        animation-delay: -0.2497s;
+    }
+    div.spinner div.bar11 {
+        transform: rotate(300deg) translate(0, -130%);
+        animation-delay: -0.167s;
+    }
+    div.spinner div.bar12 {
+        transform: rotate(330deg) translate(0, -130%);
+        animation-delay: -0.0833s;
+    }
+}
+// end here
 
 .st {
-    font-size: 12px !important;
+    font-size: 15px !important;
 }
 .container {
     width: 100%;
@@ -27,11 +125,10 @@ body {
         flex-direction: column;
         flex-wrap: nowrap;
         padding: 0 20px;
-        @media (min-width: 768px){
+        @media (min-width: 768px) {
             border: 1px solid #3f3f3f;
             border-radius: 20px;
             padding-bottom: 1em;
-
         }
 
         .heading {
@@ -47,8 +144,8 @@ body {
             .message_icon {
                 // background-color: #383838;
                 padding: 10px;
-                border-radius: 3px;
-                cursor: pointer;
+                border-radius: 7px;
+                // cursor: pointer;
                 // box-shadow: rgba(66, 66, 66, 0.3) 0px 0px 0px 2px;
             }
         }
@@ -64,17 +161,20 @@ body {
             overflow-x: auto;
             .row {
                 width: 6rem;
+                height: 9em;
                 display: flex;
                 flex-direction: column;
-                // border: 1px solid;
-                background-color: rgba(68, 68, 68, 0.9);
                 align-items: center;
+                justify-content: center;
                 padding: 0.7rem 1.8rem;
                 border-radius: 6px;
                 margin: 0 7px;
                 gap: 8px;
+                background: rgba(68, 68, 68, 0.8);
+                border-radius: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.18);
                 .heading {
-                    font-size: 15px;
+                    font-size: 16px;
                 }
                 .animated_icon {
                     lottie-player {
@@ -102,6 +202,9 @@ body {
                 padding: 0.5rem 1rem;
                 border-radius: 5px;
                 box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                border-radius: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.18);
+                // cursor: pointer;
 
                 .heading {
                     display: flex;
@@ -155,22 +258,35 @@ body {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(68, 68, 68);
-    border-radius: 4px;
+    // background-color: rgb(68, 68, 68);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
+    background: rgba(68, 68, 68, 0.4);
+    backdrop-filter: blur(4px);
 
     .tabs {
         padding: 0.4rem;
         border-radius: 4px;
-        cursor: pointer;
+        // cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        span {
+            font-size: 13px;
+            text-transform: capitalize;
+        }
     }
-    .active {
-        background-color: #5d3f6b;
-        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    }
+    // .active {
+    //     background: rgba(93, 63, 107, 0.6);
+    //     backdrop-filter: blur(6px);
+    //     border-radius: 10px;
+    //     border: 1px solid rgba(255, 255, 255, 0.18);
+    //     background-color: #5d3f6b;
+    //     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    // }
 }

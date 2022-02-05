@@ -34,3 +34,26 @@ $('#logout').click(function(){
         // An error happened.
       });
 })
+
+
+// show loader on page load
+$( document ).ready(function() {
+  $('.loading').hide();
+});
+
+// message icon onclick css 
+$('.message_icon').click(function(){
+  $('.message_icon').css('background-color','rgba(68, 68, 68, 0.8)')
+})
+
+// add goal onclick event
+$('.addGoal').click(function(){
+  window.location='pages/addgoal.html';
+})
+
+// toggling goal module 
+$('.module').click(function () {
+  var divname= $(this).last().hide();
+  console.log($(this).last().length)
+
+});
