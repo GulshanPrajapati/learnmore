@@ -1,7 +1,7 @@
 // show loader on page load
-// $(document).ready(function () {
-//   $(".loading").hide();
-// });
+$(document).ready(function () {
+  $(".loading").hide();
+});
 
 // initializeApp firebase
 const firebaseApp = firebase.initializeApp({
@@ -28,7 +28,7 @@ firebase.auth().onAuthStateChanged((user) => {
     // console.log(user.phoneNumber ? user.phoneNumber : user.email);
     // console.log(uid);
     // console.log("Logged In");
-    $(".loading").hide();
+    // $(".loading").hide();
   } else {
     window.location = "../login.html";
   }
