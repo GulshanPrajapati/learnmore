@@ -47,7 +47,18 @@ $(".logout_btn").click(function () {
 });
 
 // toggling settings module
-$(".settings .row").on("click", function () {
-  $(this).find(".col_data").animate({bottom: '0px',opacity:'1'});
-  $(this).find(".icon").toggleClass("rotate_icon"); 
+$('#cancel_btn').click(function(e){
+  e.preventDefault()
+  $(this).parent().parent().animate({bottom: '-500em'},"slow")
+  // console.log('cancel btn clicked')
+})
+$(".account").on("click", function (e) {
+  e.preventDefault()
+  $(this).parent().find(".col_data").animate({bottom: '0em'},"slow");
+  // console.log('account btn clicked')
+  // $(this).find(".icon").toggleClass("rotate_icon"); 
 });
+
+$('#image').click(function(){
+  $('#profile_image').trigger('click')
+})

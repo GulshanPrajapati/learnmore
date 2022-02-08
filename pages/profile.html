@@ -67,8 +67,8 @@
 
         <div class="settings">
 
-          <div class="row">
-            <div class="col">
+          <div class="row" >
+            <div class="col account">
               <span>Account</span>
               <div class="icon">
                 <svg
@@ -86,15 +86,21 @@
               </div>
             </div>
             <div class="col_data">
-                <span></span>
-                <input type="text" placeholder="Update Name" id="update_name">
-                <input type="text" placeholder="Update Email" id="update_email">
-                <input type="text" placeholder="Update Number" id="update_number">
-                <button id="update_btn">Update</button>
+                <span><svg class="account" id="cancel_btn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-plus" width="35" height="35" viewBox="0 0 24 24"><path fill="rgba(255, 255, 255, 0.6)" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg></span>
+                <div class="profile_picture">
+                  <img id="image" src="https://dummyimage.com/600x400/fff/000.jpg" alt="profile image" accept=".png,.gif, .jpeg">
+                  <input name="profile_image" type="file" id="profile_image" hidden>
+                </div>
+                <input type="text" placeholder=" Name" id="update_name">
+                <input type="text" placeholder=" Email" id="update_email">
+                <input type="text" placeholder=" Number" id="update_number">
+                <input type="text" placeholder=" Qualification" id="update_qualificcation">
+                <input type="text" placeholder=" University Name" id="update_university_name">
+                <button id="update_btn">Update Profile</button>
             </div>
           </div>
 
-          <div class="row" onclick="window.location='addmodule.html'">
+          <div class="row addmodule" onclick="window.location='addmodule.html'">
             <div class="col">
               <span>Add Module</span>
               <div class="icon_">
