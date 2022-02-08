@@ -133,6 +133,7 @@ body {
             align-items: center;
             color: rgba(255, 255, 255, 0.6);
             font-size: 30px;
+            margin-bottom: 1em;
 
             h4{
                 margin-bottom: 0.7rem;
@@ -163,12 +164,16 @@ body {
                 align-items: center;
                 justify-content: space-between;
                 padding: 0px 20px;
-                background-color: rgba(196, 196, 196, 0.2);
+                background-color: rgba(196, 196, 196, 0.1);
                 border-radius: 5px;
                 font-size: 18px;
                 span {
                     cursor: pointer;
                     padding: 0.6rem;
+                }
+
+                p{
+                    margin: 10px;
                 }
             }
             .submit_btn{
