@@ -35,7 +35,8 @@ firebase.auth().onAuthStateChanged((user) => {
 });
 
 $("#search_btn").keyup(function () {
-  if ($("#search_btn").val() == "") {
+  console.log($.trim($("#search_btn").val()))
+  if ($.trim($("#search_btn").val()) == '') {
     $(".search_result").css("display", "none");
     $(".loading_content").show();
   } else {

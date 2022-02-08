@@ -52,7 +52,7 @@ $('.message_icon').click(function(){
 
 
 // toggling goal module 
-$(".module").on('click',function(){
-  $(this).find(".module_data").toggle();
-  $(this).find('.icon').toggleClass('rotate_icon')
+$(".heading").on('click',function(){
+  $(this).parent().find(".module_data").toggle();
+  $(this).parent().find('.icon').toggleClass('rotate_icon')
 })

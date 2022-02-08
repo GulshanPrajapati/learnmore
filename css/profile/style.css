@@ -389,6 +389,14 @@ body {
 }
 
 .container .contain .settings .row .col_data {
+  position: fixed;
+  bottom: -1000;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 45em;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -396,15 +404,33 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
   padding-top: 1em;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #2b2b2bc4;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 1em;
+  border-radius: 10px 10px 0 0;
+  opacity: 0;
+}
+
+.container .contain .settings .row .col_data span {
+  width: 8em;
+  height: 0.4em;
+  border-radius: 1em;
+  background-color: #4a4a4a;
+  margin-bottom: 0.6em;
 }
 
 .container .contain .settings .row .col_data input, .container .contain .settings .row .col_data button {
+  width: 100%;
   padding: 0.6em;
   border: 1px solid rgba(196, 196, 196, 0.2);
-  background-color: #4a4a4a;
+  background-color: rgba(255, 255, 255, 0.05);
   outline: none;
   color: rgba(255, 255, 255, 0.6);
   font-size: 17px;
@@ -412,7 +438,7 @@ body {
 }
 
 .container .contain .settings .row .col_data button {
-  background-color: #7c429769;
+  background-color: #7c429788;
 }
 
 .menu_tabs {
