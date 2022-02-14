@@ -49,12 +49,12 @@ $(".logout_btn").click(function () {
 // toggling settings module
 $('#cancel_btn').click(function(e){
   e.preventDefault()
-  $(this).parent().parent().animate({bottom: '-500em'},"slow")
+  $(this).parent().parent().animate({bottom: '-300em'})
   // console.log('cancel btn clicked')
 })
 $(".account").on("click", function (e) {
   e.preventDefault()
-  $(this).parent().find(".col_data").animate({bottom: '0em'},"slow");
+  $(this).parent().find(".col_data").animate({bottom: '0em'});
   // console.log('account btn clicked')
   // $(this).find(".icon").toggleClass("rotate_icon"); 
 });
