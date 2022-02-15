@@ -37,8 +37,30 @@
 
         <div class="profile_contain">
           <div class="profile_icon">
-            <img src="../image/face3d.png" alt="profile image" />
+            <img src="" alt="profile image" id="profile_image"/>
+
+            <div class="set_profile" id="set_profile">
+              <div class="images">
+                <img class="setimage" src="../image/model_1.png" alt="profile image" />
+                <img class="setimage" src="../image/model_2.png" alt="profile image" />
+                <img class="setimage" src="../image/model_3.png" alt="profile image" />
+                <img class="setimage" src="../image/model_4.png" alt="profile image" />
+                <img class="setimage" src="../image/model_5.png" alt="profile image" />
+                <img class="setimage" src="../image/model_6.png" alt="profile image" />
+                <img class="setimage" src="../image/model_7.png" alt="profile image" />
+                <img class="setimage" src="../image/model_8.png" alt="profile image" />
+                <img class="setimage" src="../image/model_9.png" alt="profile image" />
+                <img class="setimage" src="../image/model_10.png" alt="profile image" />
+                <img class="setimage" src="../image/model_11.png" alt="profile image" />
+                <img class="setimage" src="../image/model_12.png" alt="profile image" />
+              </div>
+              <div class="button">
+                <button class="close" id="set_profile_close">Close</button>
+                <!-- <button class="update_btn">Update</button> -->
+              </div>
           </div>
+          </div>
+          
           <div class="profile_information">
             <span class="name" id="username"></span>
             <span class="email" id="useremail"></span>
@@ -89,7 +111,7 @@
                 <span><svg class="account" id="cancel_btn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-plus" width="35" height="35" viewBox="0 0 24 24"><path fill="rgba(255, 255, 255, 0.6)" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg></span>
                 <div class="profile_picture">
                   <img id="image" src="../image/face3d.png" alt="profile image" accept=".png,.gif, .jpeg">
-                  <input name="profile_image" type="file" id="profile_image" hidden>
+                  <input name="profile_image" type="file" hidden>
                 </div>
                 <input type="text" placeholder=" Name" id="update_name">
                 <input type="text" placeholder=" Email" id="update_email">
