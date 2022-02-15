@@ -58,14 +58,8 @@ $(".account").on("click", function (e) {
   // console.log('account btn clicked')
   // $(this).find(".icon").toggleClass("rotate_icon"); 
 });
-
-$('#image').click(function(){
-  $('#profile_image').trigger('click')
-})
-
-
 // update profile picture js here 
-$('#profile_image').click(function(){
+$('.profile_image').click(function(){
   $('#set_profile').animate({left: "0"});
 })
 // onclick to profile picture showing other image to set and change 
@@ -77,7 +71,7 @@ $('.setimage').click(function(){
   $('.setimage').css('border','none')
   $(this).css('border','2px solid white')
   localStorage.setItem("profile_image", $(this).attr('src'));
-  $('#profile_image').attr('src',localStorage.getItem("profile_image"))
+  $('.profile_image').attr('src',localStorage.getItem("profile_image"))
 })
 // fetch profile picture from local storage
-$('#profile_image').attr('src',localStorage.getItem("profile_image"))
+$('.profile_image').attr('src',localStorage.getItem("profile_image"))
