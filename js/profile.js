@@ -17,24 +17,43 @@ const firebaseApp = firebase.initializeApp({
 const db = firebaseApp.firestore();
 const auth = firebaseApp.auth();
 
-// on state change
+//-----------on state change------------------
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
-    $("#username").text(user.displayName ? user.displayName : "Unknown");
-    $("#useremail").text(user.email ? user.email : "Email Not Rgistered");
+    $("#useruid").val(user.uid);
     $("#usernumber").text(
       user.phoneNumber ? user.phoneNumber : "Number Not Rgistered"
     );
-    // console.log(user.phoneNumber ? user.phoneNumber : user.email);
-    // console.log(uid);
-    // console.log("Logged In");
-    // $(".loading").hide();
+
+    // fetch profile picture from firestore
+    db.collection(user.uid)
+      .doc("userDetails")
+      .onSnapshot((doc) => {
+        var profileLink = doc.data()["profileLink"];
+        var name = doc.data()["name"];
+        var qualification = doc.data()["qualification"];
+        var university = doc.data()["university"];
+        var email = doc.data()["email"];
+        var Number = user.phoneNumber
+        $(".profile_image").attr("src", profileLink);
+        $("#username").text(name ? name : "Unknown");
+        $("#useremail").text(email ? email : "Email Not Rgistered");
+
+        // setting my account details if already filled
+        $("#update_name").val(name?name:'');
+        $("#update_email").val(email?email:'');
+        $("#update_number").val(Number);
+        $("#update_qualification").val(qualification?qualification:'');
+        $("#update_university_name").val(university?university:'');
+
+        // $(".loading").hide();
+      });
   } else {
     window.location = "../login.html";
   }
 });
 
-// logout script
+//------------------logout script--------------------------
 $(".logout_btn").click(function () {
   firebase
     .auth()
@@ -48,29 +67,44 @@ $(".logout_btn").click(function () {
     });
 });
 
+//--------get account update panel--------------------------
 $(".account").on("click", function (e) {
   e.preventDefault();
   $(this).parent().find(".col_data").animate({ bottom: "0em" });
   // console.log('account btn clicked')
   // $(this).find(".icon").toggleClass("rotate_icon");
 });
-// update profile picture js here
+
+//-------- Animate profile picture panel ----------
 $(".profile_image").click(function () {
   $("#set_profile").animate({ left: "0" });
 });
-// onclick to profile picture showing other image to set and change
+
+//---------closing profile picture panel-----
 $("#set_profile_close").click(function () {
   $("#set_profile").animate({ left: "-100em" }, "slow");
 });
-// onclick to image store the link to local storage and change profile picture
+
+// onclick to image store the link to firestore database and change profile picture
 $(".setimage").click(function () {
   $(".setimage").css("border", "none");
   $(this).css("border", "2px solid white");
-  localStorage.setItem("profile_image", $(this).attr("src"));
-  $(".profile_image").attr("src", localStorage.getItem("profile_image"));
+
+  //---updating script-------------------
+  var user_uid = $("#useruid").val();
+  db.collection(user_uid)
+    .doc("userDetails")
+    .update({
+      profileLink: $(this).attr("src"),
+    })
+    .then(() => {
+      console.log("Document successfully written!");
+    })
+    .catch((error) => {
+      console.error("Error writing document: ", error);
+    });
+  $(".profile_image").attr("src", $(this).attr("src"));
 });
-// fetch profile picture from local storage
-$(".profile_image").attr("src", localStorage.getItem("profile_image"));
 
 // toggling settings module
 $("#cancel_btn").click(function (e) {
@@ -107,11 +141,23 @@ $("#update_btn").click(function () {
     $("#update_qualification").val() != "" &&
     $("#update_university_name").val() != ""
   ) {
-    localStorage.setItem("name", $("#update_name").val());
-    localStorage.setItem("email", $("#update_email").val());
-    localStorage.setItem("qualification", $("#update_qualification").val());
-    localStorage.setItem("university_name", $("#update_university_name").val());
-    window.location.reload();
+    var user_uid = $("#useruid").val();
+    db.collection(user_uid)
+      .doc("userDetails")
+      .update({
+        name: $("#update_name").val(),
+        email: $("#update_email").val(),
+        qualification: $("#update_qualification").val(),
+        university: $("#update_university_name").val(),
+        number: $("#update_number").val(),
+      })
+      .then(() => {
+        console.log("Document successfully written!");
+        window.location.reload();
+      })
+      .catch((error) => {
+        console.error("Error writing document: ", error);
+        window.location.reload();
+      });
   }
 });
-

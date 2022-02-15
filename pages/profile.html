@@ -37,7 +37,7 @@
 
         <div class="profile_contain">
           <div class="profile_icon">
-            <img src="" alt="profile image" id="profile_image" class="profile_image"/>
+            <img src="../image/model_2.png" alt="profile image" id="profile_image" class="profile_image"/>
 
             <div class="set_profile" id="set_profile">
               <div class="images">
@@ -65,6 +65,7 @@
             <span class="name" id="username"></span>
             <span class="email" id="useremail"></span>
             <span class="number" id="usernumber"></span>
+            <input type="text" id="useruid" hidden>
           </div>
         </div>
 
@@ -110,11 +111,11 @@
             <div class="col_data">
                 <span><svg class="account" id="cancel_btn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-plus" width="35" height="35" viewBox="0 0 24 24"><path fill="rgba(255, 255, 255, 0.6)" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg></span>
                 <div class="profile_picture">
-                  <img id="image" class="profile_image" src="../image/face3d.png" alt="profile image" accept=".png,.gif, .jpeg">
+                  <img id="image" class="profile_image" src="../image/model_2.png" alt="profile image" accept=".png,.gif, .jpeg">
                 </div>
                 <input type="text" placeholder=" Name" id="update_name">
                 <input type="mail" placeholder=" Email" id="update_email">
-                <!-- <input type="text" placeholder=" Number" id="update_number"> -->
+                <input readonly type="text" placeholder=" Number" id="update_number">
                 <input type="text" placeholder=" Qualification" id="update_qualification">
                 <input type="text" placeholder=" University Name" id="update_university_name">
                 <button id="update_btn">Update Profile</button>
