@@ -43,6 +43,12 @@ $('.close_add_modal').click(function(){
 })
 //get chapters data when user select there goal
 $('#select_goal').change(function(){
-  $('#data_contain').show()
+  if($('#select_goal').val()!=''){
+    $('.add_btn').show();
+    $('#data_contain').show();
+  }else{
+    $('.add_btn').hide();
+    $('#data_contain').hide();
+  }
 })
 
