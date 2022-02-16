@@ -33,3 +33,16 @@ firebase.auth().onAuthStateChanged((user) => {
     window.location = "../login.html";
   }
 });
+
+//sliding up adding panel
+$('.add_btn').click(function(){
+  $('.add_modal').animate({bottom: "0"},'fast');
+})
+$('.close_add_modal').click(function(){
+  $('.add_modal').animate({bottom: "-100rem"},'slow');
+})
+//get chapters data when user select there goal
+$('#select_goal').change(function(){
+  $('#data_contain').show()
+})
+

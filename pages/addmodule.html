@@ -8,7 +8,7 @@
   </head>
   <body>
     <!-- loading  -->
-    <div class="loading">
+    <div class="loading" style="display: none">
       <div class="spinner" id="spinner">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -54,9 +54,9 @@
           <option value="CAT">CAT</option>
           <option value="GATE">GATE</option>
           <option value="UPSC">UPSC</option>
-          
         </select>
-        <div class="data_contain">
+
+        <div class="data_contain" id="data_contain" style="display: none">
           <div class="row">
             <p>Chapter 1</p>
             <span class="edit_icon">
@@ -200,6 +200,14 @@
           <div class="submit_btn">Submit</div>
         </div>
       </div>
+    </div>
+    <!---------------------------------- modal ----------------------->
+    <div class="add_modal">
+      <div class="close close_add_modal">
+        close
+      </div>
+      <input type="text" placeholder="Chapter Name" id="add_chapter_name" />
+      <button id="add_chapter_btn">Add Chapter</button>
     </div>
     <!------------------------------------------------- menu tabs ------------------------------------------->
     <div class="menu_tabs">

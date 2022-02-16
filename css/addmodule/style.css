@@ -230,7 +230,21 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.6);
   padding: 5px;
   border-radius: 4px;
-  cursor: pointer;
+}
+
+.container .contain select {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(196, 196, 196, 0.1);
+  border-radius: 5px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1em;
+}
+
+.container .contain select option {
+  background-color: #3c3c3c;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .container .contain .data_contain {
@@ -252,7 +266,8 @@ body {
   gap: 10px;
 }
 
-.container .contain .data_contain .row, .container .contain .data_contain .submit_btn {
+.container .contain .data_contain .row,
+.container .contain .data_contain .submit_btn {
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -275,12 +290,14 @@ body {
   font-size: 18px;
 }
 
-.container .contain .data_contain .row span, .container .contain .data_contain .submit_btn span {
+.container .contain .data_contain .row span,
+.container .contain .data_contain .submit_btn span {
   cursor: pointer;
   padding: 0.6rem;
 }
 
-.container .contain .data_contain .row p, .container .contain .data_contain .submit_btn p {
+.container .contain .data_contain .row p,
+.container .contain .data_contain .submit_btn p {
   margin: 10px;
 }
 
@@ -289,6 +306,64 @@ body {
   text-align: center;
   background-color: #5d3f6b;
   padding: 0.6rem 20px;
+}
+
+.add_modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -100rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 90%;
+  max-width: 46rem;
+  background-color: rgba(52, 52, 52, 0.6);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+  border-radius: 5px;
+  gap: 10px;
+  z-index: 2;
+}
+
+.add_modal .close {
+  width: 100%;
+  text-align: end;
+  margin-bottom: 1em;
+}
+
+.add_modal input,
+.add_modal button {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+  outline: none;
+  background-color: rgba(196, 196, 196, 0.2);
+  color: #ababab;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+.add_modal button {
+  background-color: #5d3f6b;
 }
 
 .menu_tabs {
