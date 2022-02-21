@@ -455,7 +455,7 @@ body {
 .container .contain .settings .row .col_data {
   height: 100vh;
   position: fixed;
-  top: 9em;
+  top: 1em;
   bottom: -300em;
   left: 0;
   right: 0;
@@ -555,7 +555,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 1rem;
-  background: rgba(68, 68, 68, 0.4);
+  background: #161b22;
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
 }
@@ -580,6 +580,6 @@ body {
 
 .menu_tabs .tabs span {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

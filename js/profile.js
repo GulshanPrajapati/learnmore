@@ -1,7 +1,7 @@
 // show loader on page load
-$(document).ready(function () {
-  $(".loading").hide();
-});
+// $(document).ready(function () {
+//   $(".loading").hide();
+// });
 
 // initializeApp firebase
 const firebaseApp = firebase.initializeApp({
@@ -46,7 +46,7 @@ firebase.auth().onAuthStateChanged((user) => {
         $("#update_qualification").val(qualification?qualification:'');
         $("#update_university_name").val(university?university:'');
 
-        // $(".loading").hide();
+        $(".loading").hide();
       });
   } else {
     window.location = "../login.html";
