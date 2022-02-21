@@ -4,9 +4,9 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #2c2c2c;
+  background-color: #161b22;
   font-family: "Poppins", sans-serif;
-  color: rgba(255, 255, 255, 0.6);
+  color: #fff;
   scroll-behavior: smooth;
 }
 
@@ -248,8 +248,8 @@ body {
   padding: 0.7em 1.5em;
   border-radius: 5px;
   border: 1px solid #3f3f3f;
-  color: white;
-  background-color: #5D3F6B;
+  color: #fff;
+  background-color: #301B3F;
   font-size: 16px;
 }
 
@@ -281,7 +281,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 1rem;
-  background: rgba(68, 68, 68, 0.4);
+  background: #161b22;
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
 }
@@ -306,6 +306,6 @@ body {
 
 .menu_tabs .tabs span {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

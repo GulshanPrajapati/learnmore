@@ -4,7 +4,7 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #2c2c2c;
+  background-color: #161b22;
   font-family: "Poppins", sans-serif;
 }
 
@@ -20,7 +20,7 @@ body {
   margin-bottom: auto;
   width: 100%;
   height: 100%;
-  background-color: rgba(31, 26, 32, 0.95);
+  background-color: #161b22;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -264,13 +264,13 @@ body {
   border-radius: 5px;
   font-size: 17px;
   outline: none;
-  background-color: rgba(196, 196, 196, 0.2);
+  background-color: #21262d;
   color: rgba(255, 255, 255, 0.8);
   text-transform: capitalize;
 }
 
 .container .contain .data_contain .row input:focus {
-  border: 3px solid rgba(93, 63, 107, 0.7);
+  border: 3px solid #301B3F;
 }
 
 .container .contain .data_contain .row button {
@@ -279,7 +279,7 @@ body {
   border-radius: 5px;
   font-size: 18px;
   cursor: pointer;
-  background-color: rgba(93, 63, 107, 0.7);
+  background-color: #301B3F;
   color: rgba(255, 255, 255, 0.8);
   font-size: 17px;
   letter-spacing: 1px;
@@ -334,7 +334,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 1rem;
-  background: rgba(68, 68, 68, 0.4);
+  background: #161b22;
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
 }
@@ -359,6 +359,6 @@ body {
 
 .menu_tabs .tabs span {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

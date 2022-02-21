@@ -4,9 +4,9 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #2c2c2c;
+  background-color: #161b22;
   font-family: "Poppins", sans-serif;
-  color: rgba(255, 255, 255, 0.6);
+  color: #fff;
   scroll-behavior: smooth;
 }
 
@@ -22,7 +22,7 @@ body {
   margin-bottom: auto;
   width: 100%;
   height: 100%;
-  background-color: rgba(31, 26, 32, 0.95);
+  background-color: #161b22;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -219,7 +219,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: rgba(255, 255, 255, 0.6);
+  color: #fff;
   font-size: 25px;
 }
 
@@ -269,7 +269,7 @@ body {
   background-color: transparent;
   outline: none;
   font-size: 20px;
-  color: rgba(255, 255, 255, 0.6);
+  color: #fff;
 }
 
 @media (max-width: 360px) {
@@ -373,7 +373,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 1rem;
-  background: rgba(68, 68, 68, 0.4);
+  background: #161b22;
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
 }
@@ -398,6 +398,6 @@ body {
 
 .menu_tabs .tabs span {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

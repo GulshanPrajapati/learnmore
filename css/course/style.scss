@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+$background-color:#161b22;
+$highlight-color:#21262d;
+$text-color:#fff;
+$container-color:#301B3F;
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #2c2c2c;
+    background-color: $background-color;
     font-family: "Poppins", sans-serif;
-    color: rgba(255, 255, 255, 0.6);
+    color: $text-color;
     scroll-behavior: smooth;
 }
 // loading animation
@@ -153,8 +157,8 @@ body {
                padding: 0.7em 1.5em;
                border-radius: 5px;
                border: 1px solid #3f3f3f;
-               color: white;
-               background-color: #5D3F6B;
+               color: $text-color;
+               background-color: $container-color;
                font-size: 16px;
            }
         }
@@ -181,7 +185,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
-    background: rgba(68, 68, 68, 0.4);
+    background: $background-color;
     backdrop-filter: blur(4px);
 
     .tabs {
@@ -194,7 +198,7 @@ body {
         align-items: center;
         span {
             font-size: 13px;
-            color: rgba(255, 255, 255, 0.6);
+            color: $text-color;
         }
     }
 }
