@@ -26,7 +26,7 @@ firebase.auth().onAuthStateChanged((user) => {
         //check user have goal set or not 
         checkUserGoal();
     } else {
-        window.location = "../login.html";
+        window.location = "https://jaiswarrahul29.github.io/learnmore/login.html";
     }
 });
 
