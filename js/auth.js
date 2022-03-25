@@ -42,7 +42,7 @@ function checkUserGoal() {
         } else {
             // doc.data() will be undefined in this case
             console.log("No such document!");
-            window.location = window.location['origin']+"/pages/addgoal.html";
+            window.location = "https://jaiswarrahul29.github.io/pages/addgoal.html";
         }
     }).catch((error) => {
         console.log("Error getting document:", error);
