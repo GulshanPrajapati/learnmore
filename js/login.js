@@ -19,8 +19,7 @@ const auth = firebaseApp.auth();
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     window.location="index.html";
-    // $(".loading").hide();
-    localStorage.setItem('userId',user.uid);
+    $(".loading").hide();
   }else{
     $(".loading").hide();
   }
