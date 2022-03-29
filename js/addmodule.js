@@ -1,67 +1,106 @@
-// // show loader on page load
-// $(document).ready(function () {
-//   $(".loading").hide();
-// });
+// on state change
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    checkUserGoalData(user.uid);
+  } else {
+    window.location = "../login.html";
+  }
+});
 
-// // initializeApp firebase
-// const firebaseApp = firebase.initializeApp({
-//   apiKey: "AIzaSyBABYSKw9SNQ4zEHTP9wYC-gDVw_dy2XjI",
-//   authDomain: "webdemo-c1945.firebaseapp.com",
-//   databaseURL: "https://webdemo-c1945.firebaseio.com",
-//   projectId: "webdemo-c1945",
-//   storageBucket: "webdemo-c1945.appspot.com",
-//   messagingSenderId: "448312953544",
-//   appId: "1:448312953544:web:34a8cb12d55ec12cb933fd",
-//   measurementId: "G-2C0N9ER52Z",
-// });
-// const db = firebaseApp.firestore();
-// const auth = firebaseApp.auth();
+function checkUserGoalData(uid) {
+  db.collection("goals").onSnapshot((querySnapshot) => {
+    var module = [];
+    querySnapshot.forEach((querySnapshot) => {
+      // console.log(querySnapshot.data())
+      // $('#select_goal').append('<option value="">Select Goal</option>');
+      if (querySnapshot.data()["uid"] == uid) {
+        var set = [
+          querySnapshot.data()["refId"],
+          querySnapshot.data()["goalname"],
+        ];
+        // module.push(querySnapshot.data()['uid'])
+        //if goal available then hide loader
 
-// // on state change
-// firebase.auth().onAuthStateChanged((user) => {
-//   if (user) {
-//     $("#username").text(user.displayName ? user.displayName : "Unknown");
-//     $("#useremail").text(user.email ? user.email : "Email Not Rgistered");
-//     $("#usernumber").text(
-//       user.phoneNumber ? user.phoneNumber : "Number Not Rgistered"
-//     );
-//     // console.log(user.phoneNumber ? user.phoneNumber : user.email);
-//     // console.log(uid);
-//     // console.log("Logged In");
-//     // $(".loading").hide();
-//   } else {
-//     window.location = "../login.html";
-//   }
-// });
-
-//sliding up adding panel
-$('.add_btn').click(function () {
-  $('.add_modal').animate({ bottom: "0" }, 'fast');
-})
-$('.close_add_modal').click(function () {
-  $('.add_modal').animate({ bottom: "-100rem" }, 'slow');
-})
-
-//fetch select goal data 
-function getGoalData() {
-  var userId = localStorage.getItem('userId');
-
-  const sfRef = db.collection(userId).doc('goals');
-  const collections = sfRef.listCollections();
-  collections.forEach(collection => {
-    console.log('Found subcollection with id:', collection.id);
+        $("#select_goal").append(
+          '<option value="' +
+            querySnapshot.data()["refId"] +
+            '">' +
+            querySnapshot.data()["goalname"] +
+            "</option>"
+        );
+        $(".loading").hide();
+      } else {
+        // if not available then redirect to add goal page
+        window.location = baseurl + "pages/addgoal.html";
+      }
+    });
   });
 }
-getGoalData()
+//get para from url and fetch current goal details
+// function setselectoption() {
+//   var url = window.location.href;
+//   url = new URL(url);
+//   var goalId = url.searchParams.get("goalId");
+//   if (goalId != null) {
+//     var docRef = db.collection("goals").doc(goalId);
+//     docRef
+//       .get()
+//       .then((doc) => {
+//         if (doc.exists) {
+//           var data = doc.data();
+//           // console.log(data);
+//           var goalname = data["goalname"];
+//           var refId = data["refId"];
+//           var module = data["module"];
+//           $('#select_goal').val(refId);
+//           setModuleData(goalname, refId, module);
+//         } else {
+//           // doc.data() will be undefined in this case
+//           console.log("No such document!");
+//         }
+//       })
+//       .catch((error) => {
+//         console.log("Error getting document:", error);
+//       });
+//   }
+// }
+// setselectoption()
+
+//fetch select goal data
+// function getGoalData(goalname,refId) {
+
+//   const sfRef = db.collection(userId).doc('goals');
+
+// }
+
+//set module
+// function setModuleData(goalname, refId, module) {
+//     console.log(module)
+//   $.each(module,function(key,val){
+//     console.log(val)
+
+//     $('#data_contain').append('<div class="row"><p>'+val+'</p><span class="edit_icon"><?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> </span> </div>')
+    
+//   })
+
+//   $('#data_contain').append('<div class="submit_btn">Submit</div>')
+// }
+
+//sliding up adding panel
+$(".add_btn").click(function () {
+  $(".add_modal").animate({ bottom: "0" }, "fast");
+});
+$(".close_add_modal").click(function () {
+  $(".add_modal").animate({ bottom: "-100rem" }, "slow");
+});
 
 //get chapters data when user select there goal
-$('#select_goal').change(function () {
-  if ($('#select_goal').val() != '') {
-    $('.add_btn').show();
-    $('#data_contain').show();
+$("#select_goal").change(function () {
+  if ($("#select_goal").val() != "") {
+    $(".add_btn").show();
+    $("#data_contain").show();
   } else {
-    $('.add_btn').hide();
-    $('#data_contain').hide();
+    $(".add_btn").hide();
+    $("#data_contain").hide();
   }
-})
-
+});

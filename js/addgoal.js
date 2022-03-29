@@ -1,43 +1,18 @@
-// show loader on page load
-$(document).ready(function () {
-  $(".loading").hide();
-});
-
-// initializeApp firebase
-const firebaseApp = firebase.initializeApp({
-  apiKey: "AIzaSyBABYSKw9SNQ4zEHTP9wYC-gDVw_dy2XjI",
-  authDomain: "webdemo-c1945.firebaseapp.com",
-  databaseURL: "https://webdemo-c1945.firebaseio.com",
-  projectId: "webdemo-c1945",
-  storageBucket: "webdemo-c1945.appspot.com",
-  messagingSenderId: "448312953544",
-  appId: "1:448312953544:web:34a8cb12d55ec12cb933fd",
-  measurementId: "G-2C0N9ER52Z",
-});
-const db = firebaseApp.firestore();
-const auth = firebaseApp.auth();
-
-// on state change
-firebase.auth().onAuthStateChanged((user) => {
-  if (user) {
-    $("#username").text(user.displayName ? user.displayName : "Unknown");
-    $("#useremail").text(user.email ? user.email : "Email Not Rgistered");
-    $("#usernumber").text(
-      user.phoneNumber ? user.phoneNumber : "Number Not Rgistered"
-    );
-    // console.log(user.phoneNumber ? user.phoneNumber : user.email);
-    // console.log(uid);
-    // console.log("Logged In");
-    // $(".loading").hide();
-  } else {
-    window.location = "../login.html";
-  }
-});
+//random string generated
+function makeid(length) {
+  var result           = '';
+  var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  var charactersLength = characters.length;
+  for ( var i = 0; i < length; i++ ) {
+    result += characters.charAt(Math.floor(Math.random() * 
+charactersLength));
+ }
+ return result;
+}
 
 
 //fetch course data
-function getCourseData() {
-  var userId = localStorage.getItem('userId');
+function getCourseData(uid) {
   db.collection("courses")
     .get()
     .then((querySnapshot) => {
@@ -51,21 +26,26 @@ function getCourseData() {
       console.log("Error getting documents: ", error);
     });
 }
-getCourseData();
 
 //set goal function
-function setGoal(goalname, course, module, duration, time) {
-  var userId = localStorage.getItem('userId');
-  var goals = db.collection(userId).doc("goals").collection(goalname).doc(goalname);
-  goals.set({
-    course: course,
-    duration: duration,
-    module: module,
-    time: time
-  })
+function setGoal(uid,goalname, course, module, duration, time) {
+  var userId = uid;
+  var refId = makeid(20)
+  var data = {
+    uid:userId,
+    goalname:goalname,
+    course:course,
+    module:module,
+    duration:duration,
+    settime:time,
+    refId:refId
+  }
+  
+  var goals = db.collection("goals").doc(refId);
+  goals.set(data)
     .then(() => {
       console.log("Document successfully updated!");
-      window.location = "./addmodule.html?goal=" + goalname + "";
+      window.location = "../index.html";
     })
     .catch((error) => {
       // The document probably doesn't exist.
@@ -74,8 +54,7 @@ function setGoal(goalname, course, module, duration, time) {
 }
 
 //on next button clicked
-function nextButtonClick() {
-
+function nextButtonClick(uid) {
   $('#submit').click(function () {
     var goalname = $("#goal_name").val();
     var course = $("#course").val();
@@ -113,10 +92,10 @@ function nextButtonClick() {
         if (doc.exists) {
           console.log("Document data:", doc.data());
           var module = doc.data();
-          setGoal(goalname, course, module, duration, time);
+          setGoal(uid,goalname, course, module, duration, time);
         } else {
-          var module = "";
-          setGoal(goalname, course, module, duration, time);
+          var module = '';
+          setGoal(uid,goalname, course, module, duration, time);
           // doc.data() will be undefined in this case
           console.log("No such document!");
         }
@@ -126,4 +105,46 @@ function nextButtonClick() {
 }
 
 
-nextButtonClick()
+
+
+
+// show loader on page load
+$(document).ready(function () {
+  $(".loading").hide();
+});
+
+// initializeApp firebase
+const firebaseApp = firebase.initializeApp({
+  apiKey: "AIzaSyBABYSKw9SNQ4zEHTP9wYC-gDVw_dy2XjI",
+  authDomain: "webdemo-c1945.firebaseapp.com",
+  databaseURL: "https://webdemo-c1945.firebaseio.com",
+  projectId: "webdemo-c1945",
+  storageBucket: "webdemo-c1945.appspot.com",
+  messagingSenderId: "448312953544",
+  appId: "1:448312953544:web:34a8cb12d55ec12cb933fd",
+  measurementId: "G-2C0N9ER52Z",
+});
+const db = firebaseApp.firestore();
+const auth = firebaseApp.auth();
+
+// on state change
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    var uid = user.uid;
+
+    $("#username").text(user.displayName ? user.displayName : "Unknown");
+    $("#useremail").text(user.email ? user.email : "Email Not Rgistered");
+    $("#usernumber").text(
+      user.phoneNumber ? user.phoneNumber : "Number Not Rgistered"
+    );
+
+    getCourseData(uid);
+    nextButtonClick(uid)
+    // console.log(user.phoneNumber ? user.phoneNumber : user.email);
+    // console.log(uid);
+    // console.log("Logged In");
+    // $(".loading").hide();
+  } else {
+    window.location = "../login.html";
+  }
+});

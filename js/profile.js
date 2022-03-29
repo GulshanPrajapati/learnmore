@@ -1,9 +1,9 @@
-// // show loader on page load
-// // $(document).ready(function () {
-// //   $(".loading").hide();
-// // });
+// show loader on page load
+// $(document).ready(function () {
+//   $(".loading").hide();
+// });
 
-// // initializeApp firebase
+// initializeApp firebase
 // const firebaseApp = firebase.initializeApp({
 //   apiKey: "AIzaSyBABYSKw9SNQ4zEHTP9wYC-gDVw_dy2XjI",
 //   authDomain: "webdemo-c1945.firebaseapp.com",
@@ -17,41 +17,42 @@
 // const db = firebaseApp.firestore();
 // const auth = firebaseApp.auth();
 
-// //-----------on state change------------------
-// firebase.auth().onAuthStateChanged((user) => {
-//   if (user) {
-//     $("#useruid").val(user.uid);
-//     $("#usernumber").text(
-//       user.phoneNumber ? user.phoneNumber : "Number Not Rgistered"
-//     );
+//-----------on state change------------------
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    
+    $("#useruid").val(user.uid);
+    $("#usernumber").text(
+      user.phoneNumber ? user.phoneNumber : "Number Not Rgistered"
+    );
 
-//     // fetch profile picture from firestore
-//     db.collection(user.uid)
-//       .doc("userDetails")
-//       .onSnapshot((doc) => {
-//         var profileLink = doc.data()["profileLink"];
-//         var name = doc.data()["name"];
-//         var qualification = doc.data()["qualification"];
-//         var university = doc.data()["university"];
-//         var email = doc.data()["email"];
-//         var Number = user.phoneNumber
-//         $(".profile_image").attr("src", profileLink);
-//         $("#username").text(name ? name : "Unknown");
-//         $("#useremail").text(email ? email : "Email Not Rgistered");
+    // fetch profile picture from firestore
+    db.collection(user.uid)
+      .doc("userDetails")
+      .onSnapshot((doc) => {
+        var profileLink = doc.data()["profileLink"];
+        var name = doc.data()["name"];
+        var qualification = doc.data()["qualification"];
+        var university = doc.data()["university"];
+        var email = doc.data()["email"];
+        var Number = user.phoneNumber
+        $(".profile_image").attr("src", profileLink);
+        $("#username").text(name ? name : "Unknown");
+        $("#useremail").text(email ? email : "Email Not Rgistered");
 
-//         // setting my account details if already filled
-//         $("#update_name").val(name?name:'');
-//         $("#update_email").val(email?email:'');
-//         $("#update_number").val(Number);
-//         $("#update_qualification").val(qualification?qualification:'');
-//         $("#update_university_name").val(university?university:'');
+        // setting my account details if already filled
+        $("#update_name").val(name?name:'');
+        $("#update_email").val(email?email:'');
+        $("#update_number").val(Number);
+        $("#update_qualification").val(qualification?qualification:'');
+        $("#update_university_name").val(university?university:'');
 
-//         $(".loading").hide();
-//       });
-//   } else {
-//     window.location = "../login.html";
-//   }
-// });
+        $(".loading").hide();
+      });
+  } else {
+    window.location = "../login.html";
+  }
+});
 
 //------------------logout script--------------------------
 $(".logout_btn").click(function () {
