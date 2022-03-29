@@ -1,7 +1,7 @@
-// $( window ).on("load", function() {
-//   // Handler for .load() called.
-//   $(".loading").hide();
-// });
+$( window ).on("load", function() {
+  // Handler for .load() called.
+  $(".loading").hide();
+});
 const firebaseApp = firebase.initializeApp({
   apiKey: "AIzaSyBABYSKw9SNQ4zEHTP9wYC-gDVw_dy2XjI",
   authDomain: "webdemo-c1945.firebaseapp.com",
@@ -21,7 +21,7 @@ firebase.auth().onAuthStateChanged((user) => {
     window.location="index.html";
     // $(".loading").hide();
   }else{
-    $(".loading").hide();
+    // $(".loading").hide();
   }
 });
 

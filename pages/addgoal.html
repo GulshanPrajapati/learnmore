@@ -61,8 +61,24 @@
             </datalist>
           </div>
           <div class="row">
-            <label for="duration">Duration <span>[In Days]</span> </label>
+            <label for="duration">Duration <span>[Date]</span> </label>
             <input type="date" placeholder="Enter Duration" id="duration" />
+            <script>
+              var d = new Date();
+
+              var month = d.getMonth() + 1;
+              var day = d.getDate();
+
+              var output =
+                d.getFullYear() +
+                "-" +
+                (month < 10 ? "0" : "") +
+                month +
+                "-" +
+                (day < 10 ? "0" : "") +
+                day;
+              $("#duration").attr("min", output);
+            </script>
           </div>
           <div class="row">
             <label for="time">Set Time To Study</label>
@@ -180,7 +196,6 @@
     </div>
     <!------------------------------------------------- end here------------------------------------------->
 
-    
     <!-- scripts  -->
     <script src="../js/addgoal.js"></script>
   </body>
