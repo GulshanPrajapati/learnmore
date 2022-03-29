@@ -18,7 +18,7 @@ const auth = firebaseApp.auth();
 // on state change
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
-    window.location="index.html";
+    // window.location="index.html";
     $(".loading").hide();
   }else{
     $(".loading").hide();
