@@ -1,8 +1,8 @@
 // test server url
-let baseurl = "http://127.0.0.1:5500/learnmore/";
+// let baseurl = "http://127.0.0.1:5500/learnmore/";
 
 // live server url
-// let baseurl = "https://jaiswarrahul29.github.io/learnmore/";
+let baseurl = "https://jaiswarrahul29.github.io/learnmore/";
 
 // show loader on page load
 $(document).ready(function () {
