@@ -19,7 +19,7 @@ function getCourseData(uid) {
       querySnapshot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
         // console.log(doc.id);
-        $('#course_data').append('<option value="' + doc.id + '"></option>');
+        $('#course_data').append('<option value="' + doc.id + '">'+doc.id+'</option>');
       });
     })
     .catch((error) => {
