@@ -35,6 +35,7 @@ firebase.auth().onAuthStateChanged((user) => {
   }
 });
 //function for checking user goal is set or not
+var goalAvai = false;
 function checkUserGoal(uid) {
   db.collection("goals").onSnapshot((querySnapshot) => {
       if(querySnapshot.empty == true){
@@ -45,14 +46,20 @@ function checkUserGoal(uid) {
             if (querySnapshot.data()["uid"] == uid) {
               //if goal available then hide loader
               // console.log(querySnapshot.data())
-              $(".loading").hide();
+              goalAvai = true;
             } else {
               // if not available then redirect to add goal page
-              window.location = baseurl + "pages/addgoal.html";
+              // window.location = baseurl + "pages/addgoal.html";
             }
           });
       }
     
     
   });
+
+  if(goalAvai == true){
+    $(".loading").hide();
+  }else{
+    window.location = baseurl + "pages/addgoal.html";
+  }
 }
