@@ -28,38 +28,34 @@ firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     var uid = user.uid;
     console.log("Logged In");
-    checkUserGoal(uid)
+    checkUserGoal(uid);
     //check user have goal set or not
   } else {
     window.location = baseurl + "login.html";
   }
 });
 //function for checking user goal is set or not
-var goalAvai = false;
 function checkUserGoal(uid) {
+  var goalAvai = false;
   db.collection("goals").onSnapshot((querySnapshot) => {
-      if(querySnapshot.empty == true){
-        window.location = baseurl + "pages/addgoal.html";
-      }else{
-        querySnapshot.forEach((querySnapshot) => {
-            console.log(querySnapshot.data())
-            if (querySnapshot.data()["uid"] == uid) {
-              //if goal available then hide loader
-              // console.log(querySnapshot.data())
-              goalAvai = true;
-            } else {
-              // if not available then redirect to add goal page
-              // window.location = baseurl + "pages/addgoal.html";
-            }
-          });
-      }
-    
-    
+    if (querySnapshot.empty == true) {
+      window.location = baseurl + "pages/addgoal.html";
+    } else {
+      querySnapshot.forEach((querySnapshot) => {
+        // console.log(querySnapshot.data())
+        if (querySnapshot.data()["uid"] == uid) {
+          //if goal available then set true
+          goalAvai = true;
+        } else {
+          // if not available then redirect to add goal page
+          // window.location = baseurl + "pages/addgoal.html";
+        }
+      });
+    }
+    if (goalAvai == true) {
+      $(".loading").hide();
+    } else {
+      window.location = baseurl + "pages/addgoal.html";
+    }
   });
-
-  if(goalAvai == true){
-    $(".loading").hide();
-  }else{
-    window.location = baseurl + "pages/addgoal.html";
-  }
 }

@@ -63,10 +63,11 @@ function selectgoaldata(uid) {
             "</option>"
         );
         $(".loading").hide();
-      } else {
-        // if not available then redirect to add goal page
-        window.location = baseurl + "pages/addgoal.html";
-      }
+      } 
+      // else {
+      //   // if not available then redirect to add goal page
+      //   // window.location = baseurl + "pages/addgoal.html";
+      // }
     });
   });
 }
