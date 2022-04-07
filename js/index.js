@@ -128,14 +128,14 @@ $("#selectGoalData select").change(function () {
                 </svg>
               </div>
             </div>
-            
+            <div class="module_data">
           
         `;
 
         $('.module_contain').append(moduleContainData);
         $.each(data['module'],function(key,value){
          var moduleContainData =`
-           <div class="module_data">
+           
               <div class="row">
                 <div class="col">
                   <div class="icon">
@@ -173,10 +173,10 @@ $("#selectGoalData select").change(function () {
                   </svg>
                 </div>
               </div>
-            </div>
+            
          `;
           $('.module_contain').append(moduleContainData)
         });
-       $('.module_contain').append('</div>')
+       $('.module_contain').append('</div></div>')
     });
 });
