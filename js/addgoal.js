@@ -138,7 +138,7 @@ firebase.auth().onAuthStateChanged((user) => {
       user.phoneNumber ? user.phoneNumber : "Number Not Rgistered"
     );
 
-    getCourseData(uid);
+    //getCourseData(uid);
     nextButtonClick(uid)
     // console.log(user.phoneNumber ? user.phoneNumber : user.email);
     // console.log(uid);
