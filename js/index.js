@@ -167,9 +167,16 @@ $("#selectGoalData select").change(function () {
                 </div>
               </div>
             </div>
-          </div>
+          
         `;
 
-        $('.module_contain').append(moduleContainData)
+        $('.module_contain').append(moduleContainData);
+        $.each(data['module'],function(key,value){
+         var moduleContainData =`
+           <p>`+value+`</p>
+         `;
+          $('.module_contain').append(moduleContainData)
+        });
+       $('.module_contain').append('</div>')
     });
 });
