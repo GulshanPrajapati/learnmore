@@ -258,7 +258,7 @@ body {
   border-width: thin;
 }
 
-.container .contain .data_contain .row input {
+.container .contain .data_contain .row input,.container .contain .data_contain .row select{
   padding: 0.8rem;
   border: none;
   border-radius: 5px;

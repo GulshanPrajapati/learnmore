@@ -394,6 +394,41 @@ body {
   color: rgba(255, 255, 255, 0.4);
 }
 
+.container .contain .module_contain .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #301b3f;
+  padding: 0.8rem;
+  border-radius: 5px;
+}
+
+.container .contain .module_contain .row .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.container .contain .module_contain .row .col .not_completed {
+  color: rgba(255, 255, 255, 0.4);
+}
+
 .menu_tabs {
   height: 3.7rem;
   width: -webkit-fill-available;

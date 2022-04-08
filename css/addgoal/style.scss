@@ -172,7 +172,7 @@ body {
                         border-width: thin;
                     }
                 }
-                input {
+                input,select {
                     // width: 18rem;
                     padding: 0.8rem;
                     border: none;
@@ -182,7 +182,7 @@ body {
                     background-color: $highlight-color;
                     color: rgba(255, 255, 255, 0.8);
                     text-transform: capitalize;
-                }
+                } 
                 input:focus {
                     border: 3px solid $container-color;
                 }

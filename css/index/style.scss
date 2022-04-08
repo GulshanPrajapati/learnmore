@@ -254,6 +254,27 @@ body {
                     }
                 }
             }
+
+            .row {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                justify-content: space-between;
+                background: #301b3f;
+                padding: 0.8rem;
+                border-radius: 5px;
+
+                .col {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    gap: 10px;
+
+                    .not_completed {
+                        color: rgba(255, 255, 255, 0.4);
+                    } 
+                }
+            }
         }
     }
 }

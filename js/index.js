@@ -96,87 +96,25 @@ $("#selectGoalData select").change(function () {
       $("#information_contain").append(buddy);
 
       var timeleft =
-        '<div class="row"><div class="heading">time</div><div class="animated_icon"><lottie-player src="https://assets4.lottiefiles.com/packages/lf20_0mszk3tz.json" background="transparent" speed="1" loop autoplay><lottie-player></div><div class="score">1.5Hr</div></div>';
+        '<div class="row"><div class="heading">time</div><div class="animated_icon"><lottie-player src="https://assets4.lottiefiles.com/packages/lf20_0mszk3tz.json" background="transparent" speed="1" loop autoplay><lottie-player></div><div class="score">0hr</div></div>';
 
       $("#information_contain").append(timeleft);
 
       var duration =
         '<div class="row"><div class="heading st">Days left</div><div class="animated_icon"><lottie-player src="https://assets6.lottiefiles.com/packages/lf20_zqw0q7sb.json" background="transparent" speed="1" loop autoplay ><lottie-player></div><div class="score">' +
-        days +
+        days +" Days"
         "</div></div>";
 
       $("#information_contain").append(duration);
       //end here
 
       //append module_contain data
-      var moduleContainData = `
-        <div class="module">
-            <div class="heading m_head">
-              <h4>`+data['goalname']+`</h4>
-              <div class="icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  width="24"
-                >
-                  <path d="M0 0h24v24H0V0z" fill="none" />
-                  <path
-                    fill="rgba(255, 255, 255, 0.6)"
-                    d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div class="module_data">
-          
-        `;
-
+      var moduleContainData = '<div class="module"><div class="heading m_head"><h4>'+data['goalname']+'</h4> <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none" /> <path fill="rgba(255, 255, 255, 0.6)" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div></div><!-- <div class="module_data"> -->';
         $('.module_contain').append(moduleContainData);
         $.each(data['module'],function(key,value){
-         var moduleContainData =`
-           
-              <div class="row">
-                <div class="col">
-                  <div class="icon">
-                    <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      version="1.1"
-                      id="mdi-check"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="#7C4297"
-                        d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
-                      />
-                    </svg>
-                  </div>
-                  <div class="title">`+value+`</div>
-                </div>
-
-                <div class="col">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    width="24"
-                  >
-                    <path d="M0 0h24v24H0V0z" fill="none" />
-                    <path
-                      fill="rgba(255, 255, 255, 0.6)"
-                      d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
-                    />
-                  </svg>
-                </div>
-              </div>
-            
-         `;
+          var moduleContainData = '<div class="row"><div class="col"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-check" width="24" height="24" viewBox="0 0 24 24" ><path fill="#7C4297" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" /></svg> </div> <div class="title">'+value+'</div> </div> <div class="col"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" ><path d="M0 0h24v24H0V0z" fill="none" /> <path fill="rgba(255, 255, 255, 0.6)" d="M8.59 16.59L13.17 12 8.59 7.41  10 6l6 6-6 6-1.41-1.41z" /> </svg> </div> </div>';
           $('.module_contain').append(moduleContainData)
         });
-       $('.module_contain').append('</div></div>')
+        $('.module_contain').append('</div></div></div>')   
     });
 });

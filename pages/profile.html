@@ -45,35 +45,88 @@
 
         <div class="profile_contain">
           <div class="profile_icon">
-            <img src="../image/model_2.png" alt="profile image" id="profile_image" class="profile_image"/>
+            <img
+              src="../image/model_2.png"
+              alt="profile image"
+              id="profile_image"
+              class="profile_image"
+            />
 
             <div class="set_profile" id="set_profile">
               <div class="images">
-                <img class="setimage" src="../image/model_1.png" alt="profile image" />
-                <img class="setimage" src="../image/model_2.png" alt="profile image" />
-                <img class="setimage" src="../image/model_3.png" alt="profile image" />
-                <img class="setimage" src="../image/model_4.png" alt="profile image" />
-                <img class="setimage" src="../image/model_5.png" alt="profile image" />
-                <img class="setimage" src="../image/model_6.png" alt="profile image" />
-                <img class="setimage" src="../image/model_7.png" alt="profile image" />
-                <img class="setimage" src="../image/model_8.png" alt="profile image" />
-                <img class="setimage" src="../image/model_9.png" alt="profile image" />
-                <img class="setimage" src="../image/model_10.png" alt="profile image" />
-                <img class="setimage" src="../image/model_11.png" alt="profile image" />
-                <img class="setimage" src="../image/model_12.png" alt="profile image" />
+                <img
+                  class="setimage"
+                  src="../image/model_1.png"
+                  alt="profile image"
+                />
+                <img
+                  class="setimage"
+                  src="../image/model_2.png"
+                  alt="profile image"
+                />
+                <img
+                  class="setimage"
+                  src="../image/model_3.png"
+                  alt="profile image"
+                />
+                <img
+                  class="setimage"
+                  src="../image/model_4.png"
+                  alt="profile image"
+                />
+                <img
+                  class="setimage"
+                  src="../image/model_5.png"
+                  alt="profile image"
+                />
+                <img
+                  class="setimage"
+                  src="../image/model_6.png"
+                  alt="profile image"
+                />
+                <img
+                  class="setimage"
+                  src="../image/model_7.png"
+                  alt="profile image"
+                />
+                <img
+                  class="setimage"
+                  src="../image/model_8.png"
+                  alt="profile image"
+                />
+                <img
+                  class="setimage"
+                  src="../image/model_9.png"
+                  alt="profile image"
+                />
+                <img
+                  class="setimage"
+                  src="../image/model_10.png"
+                  alt="profile image"
+                />
+                <img
+                  class="setimage"
+                  src="../image/model_11.png"
+                  alt="profile image"
+                />
+                <img
+                  class="setimage"
+                  src="../image/model_12.png"
+                  alt="profile image"
+                />
               </div>
               <div class="button">
                 <button class="close" id="set_profile_close">Close</button>
                 <!-- <button class="update_btn">Update</button> -->
               </div>
+            </div>
           </div>
-          </div>
-          
+
           <div class="profile_information">
             <span class="name" id="username"></span>
             <span class="email" id="useremail"></span>
             <span class="number" id="usernumber"></span>
-            <input type="text" id="useruid" hidden>
+            <input type="text" id="useruid" hidden />
           </div>
         </div>
 
@@ -88,7 +141,7 @@
           </div>
           <div class="row">
             <span class="title">Friends</span>
-            <span class="number">12k</span>
+            <span class="number">0</span>
           </div>
           <!-- <div class="row">
                 <span class="title">Subscription</span>
@@ -97,8 +150,7 @@
         </div>
 
         <div class="settings">
-
-          <div class="row" >
+          <div class="row">
             <div class="col account">
               <span>Account</span>
               <div class="icon">
@@ -117,16 +169,51 @@
               </div>
             </div>
             <div class="col_data">
-                <span><svg class="account" id="cancel_btn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-plus" width="35" height="35" viewBox="0 0 24 24"><path fill="rgba(255, 255, 255, 0.6)" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg></span>
-                <div class="profile_picture">
-                  <img id="image" class="profile_image" src="../image/model_2.png" alt="profile image" accept=".png,.gif, .jpeg">
-                </div>
-                <input type="text" placeholder=" Name" id="update_name">
-                <input type="mail" placeholder=" Email" id="update_email">
-                <input readonly type="text" placeholder=" Number" id="update_number">
-                <input type="text" placeholder=" Qualification" id="update_qualification">
-                <input type="text" placeholder=" University Name" id="update_university_name">
-                <button id="update_btn">Update Profile</button>
+              <span
+                ><svg
+                  class="account"
+                  id="cancel_btn"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  version="1.1"
+                  id="mdi-plus"
+                  width="35"
+                  height="35"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="rgba(255, 255, 255, 0.6)"
+                    d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                  /></svg
+              ></span>
+              <div class="profile_picture">
+                <img
+                  id="image"
+                  class="profile_image"
+                  src="../image/model_2.png"
+                  alt="profile image"
+                  accept=".png,.gif, .jpeg"
+                />
+              </div>
+              <input type="text" placeholder=" Name" id="update_name" />
+              <input type="mail" placeholder=" Email" id="update_email" />
+              <input
+                readonly
+                type="text"
+                placeholder=" Number"
+                id="update_number"
+              />
+              <input
+                type="text"
+                placeholder=" Qualification"
+                id="update_qualification"
+              />
+              <input
+                type="text"
+                placeholder=" University Name"
+                id="update_university_name"
+              />
+              <button id="update_btn">Update Profile</button>
             </div>
           </div>
 
@@ -148,14 +235,27 @@
                 </svg>
               </div>
             </div>
-            
           </div>
 
           <div class="row privacypolicy">
             <div class="col">
               <span>Subcription Plan</span>
               <div class="icon_">
-                <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-currency-inr" width="24" height="24" viewBox="0 0 24 24"><path fill="rgba(255, 255, 255, 0.6)" d="M8,3H18L17,5H13.74C14.22,5.58 14.58,6.26 14.79,7H18L17,9H15C14.75,11.57 12.74,13.63 10.2,13.96V14H9.5L15.5,21H13L7,14V12H9.5V12C11.26,12 12.72,10.7 12.96,9H7L8,7H12.66C12.1,5.82 10.9,5 9.5,5H7L8,3Z" /></svg>
+                <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  version="1.1"
+                  id="mdi-currency-inr"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="rgba(255, 255, 255, 0.6)"
+                    d="M8,3H18L17,5H13.74C14.22,5.58 14.58,6.26 14.79,7H18L17,9H15C14.75,11.57 12.74,13.63 10.2,13.96V14H9.5L15.5,21H13L7,14V12H9.5V12C11.26,12 12.72,10.7 12.96,9H7L8,7H12.66C12.1,5.82 10.9,5 9.5,5H7L8,3Z"
+                  />
+                </svg>
               </div>
             </div>
           </div>
@@ -164,7 +264,21 @@
             <div class="col">
               <span>Privacy Policy</span>
               <div class="icon_">
-                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/><path fill="rgba(255, 255, 255, 0.6)"  d="M12,3.19l7,3.11V11c0,4.52-2.98,8.69-7,9.93C7.98,19.69,5,15.52,5,11V6.3L12,3.19 M12,1L3,5v6c0,5.55,3.84,10.74,9,12 c5.16-1.26,9-6.45,9-12V5L12,1L12,1z M11,7h2v2h-2V7z M11,11h2v6h-2V11z"/></g></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  enable-background="new 0 0 24 24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <g>
+                    <rect fill="none" height="24" width="24" />
+                    <path
+                      fill="rgba(255, 255, 255, 0.6)"
+                      d="M12,3.19l7,3.11V11c0,4.52-2.98,8.69-7,9.93C7.98,19.69,5,15.52,5,11V6.3L12,3.19 M12,1L3,5v6c0,5.55,3.84,10.74,9,12 c5.16-1.26,9-6.45,9-12V5L12,1L12,1z M11,7h2v2h-2V7z M11,11h2v6h-2V11z"
+                    />
+                  </g>
+                </svg>
               </div>
             </div>
           </div>
@@ -173,7 +287,21 @@
             <div class="col">
               <span>Help</span>
               <div class="icon_">
-                <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-help" width="24" height="24" viewBox="0 0 24 24"><path fill="rgba(255, 255, 255, 0.6)" d="M10,19H13V22H10V19M12,2C17.35,2.22 19.68,7.62 16.5,11.67C15.67,12.67 14.33,13.33 13.67,14.17C13,15 13,16 13,17H10C10,15.33 10,13.92 10.67,12.92C11.33,11.92 12.67,11.33 13.5,10.67C15.92,8.43 15.32,5.26 12,5A3,3 0 0,0 9,8H6A6,6 0 0,1 12,2Z" /></svg>
+                <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  version="1.1"
+                  id="mdi-help"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="rgba(255, 255, 255, 0.6)"
+                    d="M10,19H13V22H10V19M12,2C17.35,2.22 19.68,7.62 16.5,11.67C15.67,12.67 14.33,13.33 13.67,14.17C13,15 13,16 13,17H10C10,15.33 10,13.92 10.67,12.92C11.33,11.92 12.67,11.33 13.5,10.67C15.92,8.43 15.32,5.26 12,5A3,3 0 0,0 9,8H6A6,6 0 0,1 12,2Z"
+                  />
+                </svg>
               </div>
             </div>
           </div>
@@ -182,13 +310,22 @@
             <div class="col">
               <span>Logout</span>
               <div class="icon_">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path fill="rgba(255, 255, 255, 0.6)" d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    fill="rgba(255, 255, 255, 0.6)"
+                    d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"
+                  />
+                </svg>
               </div>
             </div>
           </div>
-          
         </div>
-        
       </div>
     </div>
     <!------------------------------------------------- menu tabs ------------------------------------------->

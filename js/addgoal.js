@@ -57,7 +57,7 @@ function setGoal(uid,goalname, course, module, duration, time) {
 function nextButtonClick(uid) {
   $('#submit').click(function () {
     var goalname = $("#goal_name").val();
-    var course = $("#course").val();
+    var course = $("#course_data").val();
     var duration = $("#duration").val();
     var time = $("#time").val();
 
@@ -138,7 +138,7 @@ firebase.auth().onAuthStateChanged((user) => {
       user.phoneNumber ? user.phoneNumber : "Number Not Rgistered"
     );
 
-    //getCourseData(uid);
+    getCourseData(uid);
     nextButtonClick(uid)
     // console.log(user.phoneNumber ? user.phoneNumber : user.email);
     // console.log(uid);
