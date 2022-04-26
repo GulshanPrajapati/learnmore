@@ -111,6 +111,12 @@ $("#selectGoalData select").change(function () {
       //append module_contain data
       var moduleContainData = '<div class="module"><div class="heading m_head"><h4>'+data['goalname']+'</h4> <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none" /> <path fill="rgba(255, 255, 255, 0.6)" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg></div></div><!-- <div class="module_data"> -->';
         $('.module_contain').append(moduleContainData);
+
+        //Demo purpose only
+        var moduleContainData = '<div class="row"><div class="col"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-check" width="24" height="24" viewBox="0 0 24 24" ><path fill="#7C4297" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" /></svg> </div> <div class="title">Demo Chapter</div> </div> <div class="col"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" ><path d="M0 0h24v24H0V0z" fill="none" /> <path fill="rgba(255, 255, 255, 0.6)" d="M8.59 16.59L13.17 12 8.59 7.41  10 6l6 6-6 6-1.41-1.41z" /> </svg> </div><div class="col">Lecture</div> </div>';
+        $('.module_contain').append(moduleContainData)
+        //End here
+
         $.each(data['module'],function(key,value){
           var moduleContainData = '<div class="row"><div class="col"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-check" width="24" height="24" viewBox="0 0 24 24" ><path fill="#7C4297" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" /></svg> </div> <div class="title">'+value+'</div> </div> <div class="col"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" ><path d="M0 0h24v24H0V0z" fill="none" /> <path fill="rgba(255, 255, 255, 0.6)" d="M8.59 16.59L13.17 12 8.59 7.41  10 6l6 6-6 6-1.41-1.41z" /> </svg> </div> </div>';
           $('.module_contain').append(moduleContainData)
